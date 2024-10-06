@@ -1,2 +1,2 @@
 # Electric-vehicle
-Simulation and modelling the electric vehicle
+Simulation and modelling a motion of the electric vehicle
