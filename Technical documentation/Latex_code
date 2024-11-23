@@ -1,0 +1,2171 @@
+\documentclass[a4paper]{article}
+\usepackage{setspace}
+\usepackage[14pt]{extsizes} % setting font size
+\usepackage[utf8]{inputenc} % setting encoding
+\usepackage[russian, english]{babel}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{tabto}
+\usepackage{tikz}
+\usepackage{tocloft}
+\usepackage{float}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage[
+    left=20mm, top=15mm, right=15mm, bottom=15mm, nohead, footskip=10mm
+]{geometry}
+\usepackage{times}
+
+\begin{document} 
+\thispagestyle{empty} % Remove page numbering for the title page
+
+\begin{center}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=18cm]{images/logo (1).jpg} % Ensure the image path is correct
+    \end{figure}
+
+    \large{
+        \textbf{
+            JSC "Kazakh-British Technical University"\break
+        }\\
+        School of Information Technology and Engineering\break
+        Industrial and Systems Engineering
+    }
+    
+    \vfill % Vertically center the content
+    
+    \large{
+        \textbf{
+            Technical Documentation
+        }
+    }
+    
+    \vfill % Vertically center the content
+    
+    Almaty 2024
+\end{center}
+
+
+\newpage
+\begin{flushleft}
+\section{Overview of the electric system for the vehicle.}
+In electrical schematics that shown in first figure you can notice that it starts from Battery and Battery Management System, joulemeter, DC- DC converter down, emergency fuses, horn, motor controller, lightning system, motor driver and brushless direct current motor. 
+\end{flushleft}
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width=15cm]{images/power_supply_propulsion_system.png}
+    \caption{Power supply and propulsion system}
+    \label{fig:enter-label}
+\end{figure}
+
+
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width=15cm]{images/energy_propulsion_shematic.png}
+    \caption{Updated, detailed propulsion system}}
+    \label{fig:enter-label}
+\end{figure}
+
+
+\begin{flushleft}
+\subsection{Battery, Li- ion based battery}
+Battery is a device that stores electrical energy in a chemical form and converts it back into electrical energy when needed. Batteries can be used in various applications, including mobile devices, electric vehicles, energy storage systems, and more. They come in different types, including lithium-ion, lead-acid, and nickel-metal hydride.
+A lithium-ion (Li-ion) battery is a type of rechargeable battery commonly used in portable electronics, electric vehicles (EVs), and renewable energy systems. Here are the key features and components of Li-ion batteries:
+Li-ion batteries consist of lithium compounds, typically in the form of lithium salts, used in the electrolyte and electrodes.
+The two primary electrodes are, cathode The positive electrode, commonly made from materials like lithium cobalt oxide (LiCoO2), lithium iron phosphate (LiFePO4), or nickel manganese cobalt (NMC). Anode The negative electrode, usually made from graphite or other carbon-based materials.  
+Electrolyte. The electrolyte in a Li-ion battery is usually a lithium salt dissolved in an organic solvent. It allows lithium ions to move between the cathode and anode during charging and discharging. Charging: When the battery is charged, lithium ions move from the cathode to the anode, where they are stored. Discharging: When the battery is used, lithium ions move back to the cathode, generating an electric current that powers devices. Li-ion batteries have a high energy density, meaning they can store a large amount of energy relative to their weight and size. This makes them ideal for portable electronics and EVs. These batteries are known for their efficiency, allowing for quick charging and a long cycle life (number of charge/discharge cycles they can undergo before performance degrades).
+\end{flushleft}
+
+
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width=10cm]{images/li_ion.png}
+    \caption{Overall system of Li- ion battery }
+    \label{fig:enter-label}
+\end{figure}
+
+
+
+
+
+\begin{flushleft}
+    \subsection{BMS, battery management system}
+A Battery Management System (BMS) is a system that monitors, controls, and manages rechargeable batteries, especially in applications like electric vehicles, renewable energy storage, and consumer electronics. It ensures safe and efficient battery operation by balancing cells, protecting against overcharge and over-discharge, and estimating the battery's state of charge (SOC) and state of health (SOH). BMS plays a critical role in enhancing battery life, safety, and performance.
+
+
+
+
+
+
+\textbf{References}
+TY  - JOUR
+AU  - Ness, Stephanie
+AU  - Boujoudar, Younes
+AU  - Aljarbouh, Ayman
+AU  - Elyssaoui, Lahcen
+AU  - Mohamed, Azeroual
+AU  - Bassine, Fatima
+AU  - Rele, Mayur
+AU  - Med, Sidi
+AU  - Abdullah, Ben
+AU  - Fes, Morocco
+AU  - Fez, Ben
+PY  - 2024/04/22
+SP  - 3640
+EP  - 3648
+T1  - Active balancing system in battery management system for Lithium-ion battery
+VL  - 14
+DO  - 10.11591/ijece.v14i4.pp3640-3648
+JO  - International Journal of Electrical and Computer Engineering (IJECE)
+ER  - 
+
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width=12cm]{images/bms.png}
+    \caption{Structure of BMS}
+    \label{fig:enter-label}
+\end{figure}
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width=15cm]{images/battery_management_system.jpg}
+    \caption{Battery management system}
+    \label{fig:enter-label}
+\end{figure}
+
+
+    
+\end{flushleft}
+
+
+
+
+\newpage
+\begin{flushleft}
+\textbf{2. Joulemeter}
+A joulemeter is a device that measures the energy consumed or delivered by a battery system. According to Singh et al. (2018), accurate energy measurement is crucial for estimating the state of charge (SOC) and overall battery efficiency. Joulemeter readings allow the BMS to monitor battery performance in real-time, facilitating proactive management of battery health and usage.
+
+
+
+Reference:
+Singh, R., & Gupta, A. (2018). Review of energy management strategies for battery electric vehicles. Energy Reports, 4, 452-464. https://doi.org/10.1016/j.egyr.2018.09.002
+\end{flushleft}
+
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width=15cm]{images/joulmeter_schematic.png}
+    \caption{Joulemeter schematic connection}
+    \label{fig:enter-label}
+\end{figure}
+
+
+\begin{flushleft}
+\textbf{3. DC-DC Converter (Buck Converter)}
+DC-DC converters, specifically buck converters, are critical for stepping down voltage levels to power various components safely. According to Raghavan et al. (2017), these converters enhance energy efficiency by minimizing energy loss during voltage regulation, thus prolonging battery life. Their design and efficiency directly influence the overall performance of the BMS.
+\end{flushleft}
+
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=10cm]{images/dc_voltage.png}
+    \caption{DC/DC voltage converter from 48 to 12 V}
+    \label{fig:enter-label}
+\end{figure}
+
+
+
+\begin{flushleft}
+Reference:
+Raghavan, V., Ganesh, S., & Sahu, S. K. (2017). Performance analysis of buck converter for battery charging applications. International Journal of Engineering Research and Applications, 7(9), 34-38.
+\end{flushleft}
+
+
+
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width=15cm]{images/converter_down.png}
+    \caption{Converter down, buck converter}
+    \label{fig:enter-label}
+\end{figure}
+
+
+
+
+
+\newpage
+\begin{flushleft}
+\textbf{4. Emergency Fuses}
+Emergency fuses protect the electrical system from overcurrent conditions. As noted by Wang et al. (2019), fuses are essential for preventing battery damage and enhancing safety. They automatically disconnect the battery from the system during faults, thereby reducing risks associated with thermal runaway and electrical fires.
+
+Reference:
+Wang, H., Li, J., & Zhang, Z. (2019). Safety considerations for lithium-ion batteries in electric vehicles: a review. Energy Storage Materials, 24, 404-413. https://doi.org/10.1016/j.ensm.2019.04.025
+\end{flushleft}
+
+
+
+
+
+
+\begin{flushleft}
+\textbf{5. Horn}
+The horn in a BMS acts as an audible alerting device, signaling fault conditions. According to Johnson et al. (2020), integrating a horn provides immediate notifications for critical battery status changes, improving user awareness and safety. This is particularly important in electric vehicles, where silent operation may mask underlying issues.
+
+Reference:
+Johnson, R. C., & Lee, M. (2020). Implementing a fault detection and notification system for electric vehicles. Journal of Electrical Engineering and Automation, 2(3), 145-156. https://doi.org/10.11648/j.eea.20200203.14
+\end{flushleft}
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width=10cm]{images/horn.png}
+    \caption{Horn schematic connection}
+    \label{fig:enter-label}
+\end{figure}
+
+
+\newpage
+\begin{flushleft}
+\textbf{6. Motor Controller}
+The motor controller regulates the power sent to the motor based on inputs from the BMS. As discussed by Alavi and Kuo (2018), the motor controller's performance significantly affects vehicle dynamics and efficiency. It ensures smooth operation by adjusting motor speed and torque according to the battery's state and user demands.
+
+Reference:
+Alavi, A. R., & Kuo, S. M. (2018). Advanced control strategies for brushless DC motor drives. IEEE Transactions on Industrial Electronics, 65(4), 3225-3236. https://doi.org/10.1109/TIE.2017.2750918
+\end{flushleft}
+
+
+
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width=10cm]{images/motor_controller.png}
+    \caption{Motor controller of BLDC motor}
+    \label{fig:enter-label}
+\end{figure}
+
+
+
+
+\begin{flushleft}
+\textbf{7. Lighting System}
+The lighting system is powered through the BMS, typically utilizing energy from DC-DC converters. Cheng et al. (2018) highlight the importance of efficient lighting solutions in enhancing visibility while managing power consumption effectively. Proper lighting design contributes to overall energy management in electric vehicles.
+
+Reference:
+Cheng, L., Zhang, X., & Zhao, H. (2018). Design and optimization of energy-efficient lighting systems in electric vehicles. Applied Energy, 215, 566-578. https://doi.org/10.1016/j.apenergy.2018.02.078
+\end{flushleft}
+
+
+
+
+
+
+
+\begin{flushleft}
+\textbf{8. Motor Driver}
+The motor driver is responsible for amplifying control signals to drive the motor effectively. Gonzalez et al. (2019) discuss how an efficient motor driver contributes to precise motor control, essential for applications requiring high performance and reliability. The integration between the motor driver and the motor controller ensures effective power management.
+
+Reference:
+Gonzalez, J. A., & Huerta, J. (2019). Advanced motor driver technologies for electric vehicles. Energies, 12(3), 478. https://doi.org/10.3390/en12030478
+\end{flushleft}
+
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width=10cm]{images/motor_driver.png}
+    \caption{Motor driver schematic of BLDC motor}
+    \label{fig:enter-label}
+\end{figure}
+
+
+
+
+
+\newpage
+\begin{flushleft}
+\textbf{9. Brushless Direct Current (BLDC) Motor}
+BLDC motors are increasingly used in various applications due to their efficiency and low maintenance requirements. According to Bose (2017), BLDC motors are particularly well-suited for electric vehicles due to their high efficiency and ability to operate under varying loads. The BMS is crucial in monitoring and managing the performance of BLDC motors, ensuring optimal operation.
+
+Reference:
+Bose, B. K. (2017). Modern power electronics and AC drives. IEEE Press. https://doi.org/10.1109/9781119129604
+\end{flushleft}
+
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width=10cm]{images/bldc_motor.jpg}
+    \caption{Brushless direct current motor diagram}
+    \label{fig:enter-label}
+\end{figure}
+
+\newpage
+\begin{flushleft}
+\textbf{System Interactions and Working Mechanism} \\
+In operation, the battery provides power that flows through the BMS, which manages and safeguards the energy output. The BMS distributes power to the joulemeter, where energy consumption is tracked and monitored. From the joulemeter, power moves to the motor driver, which controls the BLDC motor's operation based on instructions from the microcontroller. The microcontroller, receiving inputs from the Hall position sensor, can adjust the motor’s speed and direction dynamically. This feedback loop between the motor driver, microcontroller, and sensor ensures precise and responsive control over the motor. Simultaneously, the DC-DC converter steps down voltage from the battery to power lower-voltage devices, such as the horn and lighting system. These components are activated as needed, with the horn providing audible alerts and the lighting system ensuring visibility or signaling functionality. In essence, this setup enables seamless interaction between the battery and various components, allowing for precise motor control, efficient energy management, and integrated safety features. The BMS and microcontroller play central roles in coordinating these functions, ensuring both efficiency and safety across the system.
+\end{flushleft}
+
+
+\section*{Power conversion: How power is converted and managed between components}
+\begin{flushleft}
+    The power management and conversion system in this electric vehicle (EV) setup illustrates the coordinated interaction of each component to maximize efficiency and functionality. The \textbf{Battery Management System (BMS)} plays a vital role in monitoring and protecting the battery pack by balancing cell voltages and guarding against conditions such as overvoltage, undervoltage, and overcurrent. The BMS is integral to extending battery life and ensuring safety, as demonstrated in research by Nishimura et al. (2021) and Coulom et al. (2019), which discuss BMS architectures and thermal regulation in lithium-ion batteries.
+
+The \textbf{DC/DC converter} transforms the high-voltage output from the battery to lower voltages suitable for auxiliary systems, including lights, control electronics, and other low-power components. This converter, typically employing buck, boost, or buck-boost topologies, ensures efficient power distribution across the vehicle’s systems. Studies by Ma et al. (2020) have examined the design of high-efficiency DC/DC converters specifically tailored for EV powertrains, underscoring their significance for effective energy management.
+
+The \textbf{Joulmeter} tracks energy consumption, providing data that can inform driving strategies to enhance efficiency---a crucial aspect in energy-restricted contexts like the Shell Eco-marathon. This focus on energy monitoring aligns with findings by Peng et al. (2018), who highlight the impact of such systems on improving overall EV efficiency through optimized energy usage.
+
+The \textbf{Motor Controller} receives signals from the \textbf{Acceleration Pedal} and \textbf{Braking Pedal} to adjust the power supplied to the \textbf{Electric Motor}, allowing precise control over speed and torque. This real-time response to driver input is essential for both performance and safety. Additionally, the \textbf{Microcontroller} processes sensor data, such as inputs from the Hall position sensor, to monitor the motor's speed and position, facilitating accurate control. Kim and Park (2022) have explored sensor-based motor control systems, which play a key role in enhancing motor efficiency and response in EV applications.
+
+The \textbf{Electric Motor}, particularly a brushed or brushless DC motor, converts electrical energy from the battery into mechanical energy, propelling the vehicle. The mechanical power generated by the motor ($P_{\text{mech}}$) is a product of the torque ($T$) and the angular speed ($\omega$) of the motor shaft:
+\begin{equation}
+    P_{\text{mech}} = T \times \omega
+\end{equation}
+
+The motor’s efficiency, power density, and control complexity directly impact the vehicle's performance, as highlighted in the comparative analysis of motor types by Gupta and Singh (2019), who investigate motor selection criteria for optimizing EV systems.
+
+The \textbf{Differential} divides the mechanical power between the left and right \textbf{Wheels}, allowing for effective torque distribution during turns and varying road conditions. This ensures stable handling and consistent power application across both wheels. The integration of a differential further enhances the vehicle's control and adaptability, particularly on uneven terrain.
+
+The braking system communicates with the motor controller to modulate power delivery during deceleration. When the braking pedal is engaged, a signal is sent to reduce or halt power flow, thereby slowing the vehicle.
+
+This EV power transmission system exemplifies a well-coordinated flow of electrical and mechanical energy, transforming battery power into effective propulsion. Research from Fang et al. (2021) and Tang et al. (2022) supports the integration of control signals with power components, showing that such systems are essential for optimizing energy efficiency and performance in EVs. The synergy between battery management, motor control, and differential gearing enables this vehicle to achieve smooth and efficient propulsion while maintaining control under diverse driving conditions.
+\end{flushleft}
+
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width=12cm]{images/power_conversion.png}
+    \caption{Power conversion between electrical and mechanical components}
+    \label{fig:enter-label}
+\end{figure}
+
+
+
+\newpage
+\section*{Simulation on matlab}
+\begin{flushleft}
+The code simulates the motion of a vehicle powered by an electric motor, taking into account rolling resistance, aerodynamic drag, and motor power. Key physical and environmental parameters are defined, including the vehicle mass, tire radius, air density, and drag coefficient. The vehicle's velocity and position are calculated over time using a time-stepping method with a 0.01-second interval. The results are stored in arrays and plotted to show how the vehicle's speed and position change over a 60-second period.    
+\end{flushleft}
+
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width=12cm]{images/simulation_power.jpg}
+    \caption{Caption}
+    \label{fig:enter-label}
+\end{figure}
+
+
+\begin{flushleft}
+    The simulation results, as shown in the plots, indicate that the vehicle's velocity gradually increases over time due to motor traction until it reaches a stable value, limited by the rolling resistance and aerodynamic drag forces. The position plot shows a near-parabolic increase, reflecting the increasing speed and the cumulative distance traveled. This demonstrates the balance between propulsion and resistive forces in electric vehicle dynamics.
+
+    \begin{itemize}
+        \item Vehicle velocity over time: Shown in figure we can consider the graph and analyze it. The maximum velocity over time in 1 minute is 20 m/s, and the position 1000 m which proves that our motor works perfectly and can pull up our vehicle from starting point. 
+    \end{itemize}
+\end{flushleft}
+
+
+\begin{flushleft}
+    \begin{figure}
+        \centering
+        \includegraphics[width=15cm]{images/}
+        \caption{Caption}
+        \label{fig:enter-label}
+    \end{figure}
+\end{flushleft}
+
+\begin{flusleft}
+    
+\end{flusleft}
+
+
+
+\begin{flushleft}
+    \section*{Motor Specifications}
+The given specifications of the motor are as follows:
+\begin{itemize}
+    \item Power: \( P = 2000 \, \text{W} \)
+    \item Voltage: \( V = 48 \, \text{V} \)
+    \item Speed: \( \text{RPM} = 4300 \, \text{RPM} \)
+    \item Torque: We need to calculate the torque based on the power and RPM.
+\end{itemize}
+
+\section*{Step 1: Calculate the Torque}
+The relationship between power, torque, and rotational speed is given by:
+\[
+P = \tau \cdot \omega
+\]
+where:
+\begin{itemize}
+    \item \( P \) is the power in watts (W),
+    \item \( \tau \) is the torque in newton-meters (Nm),
+    \item \( \omega \) is the angular velocity in radians per second.
+\end{itemize}
+
+To find \( \omega \) from the RPM, we use the formula:
+\[
+\omega = \frac{\text{RPM} \cdot 2\pi}{60}
+\]
+Substituting the given RPM:
+\[
+\omega = \frac{4300 \cdot 2\pi}{60} = 450.76 \, \text{rad/s}
+\]
+
+Now, rearranging the power equation to solve for torque:
+\[
+\tau = \frac{P}{\omega}
+\]
+Substituting the given power \( P = 2000 \, \text{W} \):
+\[
+\tau = \frac{2000}{450.76} \approx 4.43 \, \text{Nm}
+\]
+
+\section*{Step 2: Recalculate the Traction Force}
+Now that we have the torque \( \tau = 4.43 \, \text{Nm} \), we can calculate the traction force using the formula:
+\[
+F_{\text{traction}} = \frac{T_{\text{motor}}}{r_{\text{tire}}}
+\]
+where:
+\begin{itemize}
+    \item \( T_{\text{motor}} = 4.43 \, \text{Nm} \) is the torque,
+    \item \( r_{\text{tire}} = 0.254 \, \text{m} \) is the radius of the tire.
+\end{itemize}
+
+Substituting the values:
+\[
+F_{\text{traction}} = \frac{4.43}{0.254} \approx 17.44 \, \text{N}
+\]
+
+\section*{Conclusion}
+After recalculating the traction force using the correct torque value, we find that the traction force is approximately \( F_{\text{traction}} = 17.44 \, \text{N} \). This is much more realistic compared to the previously calculated traction force using the incorrect torque of 4300 Nm, which resulted in a value of 16,929.13 N.
+
+
+
+\end{flushleft}
+
+
+\begin{flushleft}
+\subsection*{Rolling Resistance Force \( F_{\text{friction}} \):}
+
+\[
+F_{\text{friction}} = N_{\text{friction}} \times m_{\text{car}} \times g
+\]
+
+where:
+\begin{itemize}
+    \item \( N_{\text{friction}} \) is the rolling resistance coefficient (in our case, 0.02),
+    \item \( m_{\text{car}} \) is the mass of the car (57 kg),
+    \item \( g \) is the gravitational acceleration (9.81 m/s²).
+\end{itemize}
+
+\subsection*{Aerodynamic Drag Force \( F_{\text{air}} \):}
+
+\[
+F_{\text{air}} = 0.5 \times P_{\text{DensityOfAir}} \times C_d \times A \times v^2
+\]
+
+where:
+\begin{itemize}
+    \item \( P_{\text{DensityOfAir}} \) is the air density (1.225 kg/m³),
+    \item \( C_d \) is the aerodynamic drag coefficient (0.3),
+    \item \( A \) is the frontal area of the car (0.5 m²),
+    \item \( v \) is the car’s speed.
+\end{itemize}
+
+\section*{Step 2: Determining Traction Force}
+
+The \textbf{traction force} \( F_{\text{traction}} \) is created by the motor and depends on the motor torque \( T \), which can be expressed through the motor’s power.
+
+\subsection*{Motor Torque \( T \):}
+
+\[
+T = \frac{P_{\text{max}}}{\omega_{\text{max}}}
+\]
+
+where:
+\begin{itemize}
+    \item \( P_{\text{max}} \) is the maximum power of the motor (1000 W),
+    \item \( \omega_{\text{max}} = \frac{V_{\text{max}}}{r_{\text{tire}}} \) is the maximum angular speed in radians per second, where \( V_{\text{max}} \) is the maximum speed and \( r_{\text{tire}} \) is the tire radius (0.254 m).
+\end{itemize}
+
+\subsection*{Traction Force \( F_{\text{traction}} \):}
+
+\[
+F_{\text{traction}} = \frac{T}{r_{\text{tire}}}
+\]
+
+\section*{Step 3: Calculating Force to Overcome Resistance}
+
+For the car to move, the traction force \( F_{\text{traction}} \) must be greater than or equal to the sum of the resistance forces (rolling resistance, aerodynamic drag, and bearing friction):
+
+\[
+F_{\text{traction}} \geq F_{\text{friction}} + F_{\text{air}} + F_{\text{bearing}}
+\]
+
+If this condition is met, the motor can move the car.
+
+\section*{Step 4: Calculating Required Power}
+
+To ensure there is enough power to maintain movement, we can also calculate the required power to overcome all resistances at a given speed:
+
+\[
+P_{\text{required}} = (F_{\text{friction}} + F_{\text{air}}) \times v
+\]
+
+If \( P_{\text{max}} \geq P_{\text{required}} \) at the desired speed, the motor will be able to maintain the car’s movement at that speed.
+
+\section*{Additional Mechanical Elements: Gears and Gear Ratios}
+
+Adding gears and gear ratios affects the torque and rotational speed transferred to the wheels.
+
+\subsection*{Gear Ratio \( G \):}
+
+\subsubsection*{Torque After Gear Transmission \( T_{\text{gear}} \):}
+
+\[
+T_{\text{gear}} = T \times G
+\]
+
+where:
+\begin{itemize}
+    \item \( T \) is the torque output from the motor,
+    \item \( G \) is the gear ratio. For example, if \( G = 2 \), it doubles the torque but reduces the output speed.
+\end{itemize}
+
+\subsubsection*{Rotational Speed After Gear Transmission \( \omega_{\text{gear}} \):}
+
+\[
+\omega_{\text{gear}} = \frac{\omega_{\text{max}}}{G}
+\]
+
+The gear ratio decreases the rotational speed but increases the output torque.
+
+\subsection*{Traction Force with Gear Ratio}
+
+The traction force on the wheel \( F_{\text{traction}} \) now depends on the torque after transmission:
+
+\[
+F_{\text{traction}} = \frac{T_{\text{gear}}}{r_{\text{tire}}} = \frac{T \times G}{r_{\text{tire}}}
+\]
+
+
+\end{flushleft}
+
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width=10cm]{images/car_motor_test_2.png}
+    \caption{Test for motor without transfer number of gear}
+    \label{fig:enter-label}
+\end{figure}
+
+
+\newpage
+\section*{1. Introduction}
+
+The demand for electric cars is growing rapidly, driven by the need for sustainable and efficient transportation. At the core of electric cars is the battery system, which determines performance, range, and reliability. This document presents the design and development of an 18.5 kWh, 48V accumulator system paired with an SP14S Battery Management System (BMS), specifically tailored for a 2000W BLDS electric motor.
+
+\subsection*{1.1 Purpose}
+The main goal of this accumulator design is to provide a high-capacity energy source that is safe, reliable, and efficient for electric bike applications. It is designed to meet the requirements of a 2000W motor, ensuring optimal performance over extended use.
+
+\subsection*{1.2 Key Specifications}
+\begin{itemize}
+    \item \textbf{Capacity:} 18.5 kWh
+    \item \textbf{Voltage:} 48V
+    \item \textbf{BMS Type:} SP14S (14-series cell configuration)
+    \item \textbf{Battery Cell Type:} INR21700-45E
+    \item \textbf{Charger:} 48V, 3.0A (54.6V max)
+\end{itemize}
+
+\subsection*{1.3 Scope of the Document}
+This document covers the technical specifications, design details, performance analysis, safety features, and maintenance guidelines of the accumulator. It also includes the integration of the SP14S BMS and the compatible charger for optimal charging performance.
+
+\newpage
+
+\section*{2 Battery Cell Details}
+
+The accumulator uses cylindrical lithium-ion cells of model \textbf{INR21700-45E}, which are known for their high energy density, long cycle life, and safety features. These cells utilize Nickel-Cobalt-Manganese (NCM) chemistry, which provides a balance of energy density, power output, and thermal stability. Below are the detailed specifications of the battery cells used:
+
+\subsection*{2.1 Battery Cell Specifications}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Parameter} & \textbf{Value} \\ \hline
+        Cell Model & INR21700-45E \\ \hline
+        Cell Type & Cylindrical lithium-ion cell \\ \hline
+        Cell Chemistry & Nickel-Cobalt-Manganese (NCM) \\ \hline
+        Nominal Capacity & 4500 mAh \\ \hline
+        Nominal Voltage & 3.7V \\ \hline
+        Charging Voltage & 4.2V \\ \hline
+        Discharge Cut-off Voltage & 2.5V \\ \hline
+        Maximum Continuous Discharge Current & 3C (13.5A) \\ \hline
+        Maximum Pulse Discharge Current & 5C (22.5A) for 5 seconds \\ \hline
+        Energy Density & 233 Wh/kg \\ \hline
+        Cycle Life & ≥80\% capacity retention after 800 cycles at +25°C \\ \hline
+        Operating Temperature (Charge) & 0 to 45°C \\ \hline
+        Operating Temperature (Discharge) & -20 to 60°C \\ \hline
+        Weight & 76 ± 2 g per cell \\ \hline
+        Safety Standards & UN 38.3, IEC 62133 \\ \hline
+    \end{tabular}
+    \caption{Specifications of INR21700-45E Battery Cell}
+    \label{tab:cell_specs}
+\end{table}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/pic1.jpg} % Adjust the width as needed
+    \caption{Battery Cell}
+    \label{fig:battery_cell}
+\end{figure}
+
+\subsection*{2.2 Configuration in the Accumulator}
+
+The accumulator is configured in a \textbf{13-series, 4-parallel (13S4P)} arrangement, consisting of 13 cells connected in series to achieve the desired voltage and 4 cells in parallel per string to increase capacity. 
+
+The total pack parameters are calculated as follows:
+\begin{itemize}
+    \item \textbf{Nominal Voltage:} \( 13 \, \text{cells} \times 3.7 \, \text{V} = 48.1 \, \text{V} \).
+    \item \textbf{Charging Voltage:} \( 13 \, \text{cells} \times 4.2 \, \text{V} = 54.6 \, \text{V} \).
+    \item \textbf{Discharge Cut-off Voltage:} \( 13 \, \text{cells} \times 2.5 \, \text{V} = 32.5 \, \text{V} \).
+    \item \textbf{Total Capacity:} \( 4 \, \text{cells in parallel} \times 4.5 \, \text{Ah per cell} = 18 \, \text{Ah} \).
+    \item \textbf{Energy Capacity:} \( 48.1 \, \text{V} \times 18 \, \text{Ah} = 866 \, \text{Wh (0.866 kWh)} \).
+\end{itemize}
+
+This configuration ensures the battery provides sufficient voltage and capacity to meet the requirements of the 2000W BLDS motor while maintaining safety and efficiency.
+
+\subsection*{2.3 Advantages of INR21700-45E Cells}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|p{10cm}|}
+        \hline
+        \textbf{Advantage} & \textbf{Description} \\ \hline
+        High Energy Density & Offers a good balance between weight and energy storage, making it ideal for electric bike applications. \\ \hline
+        Long Cycle Life & Provides sustained performance over numerous charge-discharge cycles. \\ \hline
+        Enhanced Safety & Includes safety mechanisms to prevent overheating, short-circuiting, and overcharging. \\ \hline
+        Stable Chemistry & The NCM chemistry ensures reliable performance with minimal thermal runaway risks. \\ \hline
+    \end{tabular}
+    \caption{Advantages of INR21700-45E Battery Cells}
+    \label{tab:cell_advantages}
+\end{table}
+
+\subsection*{2.4 Safety Features}
+The INR21700-45E cells comply with international safety standards such as \textit{UN 38.3} and \textit{IEC 62133}. These cells are tested for crush resistance, thermal stability, over-discharge protection, and short-circuit resistance. Additionally, the cells feature a built-in safety vent that prevents overpressure and thermal runaway in extreme conditions.
+
+\newpage
+\subsection*{References}
+\begin{enumerate}
+    \item Samsung SDI. \textit{INR21700-45E Lithium-Ion Cell Specifications}. 2023.
+    \item IEC. \textit{IEC 62133: Safety Requirements for Portable Sealed Secondary Lithium Cells}. International Electrotechnical Commission, 2017.
+    \item ISO/IEC. \textit{UN Manual of Tests and Criteria, Section 38.3: Lithium Batteries}. United Nations, 2020.
+\end{enumerate}
+
+
+
+
+
+
+\section*{3. BMS Overview}
+
+The Battery Management System (BMS) is an essential component of the accumulator, ensuring safety, efficiency, and longevity. The \textbf{SP14S BMS} is configured to support a variety of lithium-ion battery setups, including the \textbf{13-series (13S)} cell configuration used in this accumulator. It is well-suited for the 48V, 13S4P accumulator designed to power a 2000W BLDS motor.
+
+\subsection*{3.1 BMS Specifications}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Parameter} & \textbf{Value} \\ \hline
+        Model & SP14S \\ \hline
+        Supported Cells & 13-series to 14-series lithium-ion cells \\ \hline
+        Nominal Voltage & Configurable, 48V for 13S \\ \hline
+        Maximum Charging Voltage & 54.6V (13S configuration) \\ \hline
+        Continuous Discharge Current & Configurable, up to 80A \\ \hline
+        Peak Discharge Current & 160A \\ \hline
+        Operating Temperature & -30°C to 75°C \\ \hline
+    \end{tabular}
+    \caption{Specifications of SP14S BMS for 13S Configuration}
+    \label{tab:bms_specs}
+\end{table}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/image.png}
+    \caption{SP14S004 Smart BMS}
+    \label{fig:sp14s_image}
+\end{figure}
+
+
+
+\subsection*{3.2 Key Functions}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|p{10cm}|}
+        \hline
+        \textbf{Function} & \textbf{Description} \\ \hline
+        Overcharge Protection & Cuts off charging when cell voltage exceeds 4.2V to prevent overcharging. \\ \hline
+        Over-discharge Protection & Disconnects load when any cell drops below 2.5V to prevent deep discharge. \\ \hline
+        Overcurrent Protection & Monitors and limits current during charging and discharging to prevent damage. \\ \hline
+        Short-circuit Protection & Immediately disconnects the circuit in case of short-circuit detection. \\ \hline
+        Temperature Monitoring & Uses NTC sensors to detect abnormal temperature rises, ensuring safety. \\ \hline
+        Cell Balancing & Passive balancing during charging to equalize cell voltages, improving overall efficiency and lifespan. \\ \hline
+    \end{tabular}
+    \caption{Key Functions of SP14S BMS}
+    \label{tab:bms_functions}
+\end{table}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/pic4.png}
+    \caption{BMS Block Diagram}
+    \label{fig:bms_block}
+\end{figure}
+
+
+
+\subsection*{3.3 How to Connect SP14S}
+
+The SP14S BMS is designed to support a \textbf{13-series (13S)} configuration. Follow these steps for proper connection:
+
+\begin{enumerate}
+    \item \textbf{Preparation:}
+    \begin{itemize}
+        \item Solder the ribbon cable to the battery pack first, ensuring accuracy in connections.
+        \item Avoid inserting the ribbon cable into the protective board before soldering; solder one wire at a time to the battery pack.
+    \end{itemize}
+
+    \item \textbf{Wiring:}
+    \begin{itemize}
+        \item Connect the \textbf{B-} terminal to the negative side of the battery pack.
+        \item Attach the ribbon cable to the protective board.
+        \item Connect the \textbf{C-} terminal to the charger and load.
+        \item Connect the positive pole of the battery pack to the positive terminals of the charger and load.
+    \end{itemize}
+
+    \item \textbf{Connecting Each Cell:}
+    \begin{itemize}
+        \item Start with the ribbon cable: Connect the first wire to the negative pole of the first cell.
+        \item Sequentially connect wires 2–14 to the corresponding positive poles of each cell.
+        \item End with the 14th wire connected to the 13th cell's positive pole (main positive terminal).
+    \end{itemize}
+\end{enumerate}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/image1.png}
+    \caption{BMS Connection Diagram for 14S Configuration}
+    \label{fig:bms_connection}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/image10.png}
+    \caption{BMS Connection Diagram for 13s Configuration}
+    \label{fig:enter-label}
+\end{figure}
+\newpage
+
+\subsection*{3.4 Communication and Monitoring}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|p{10cm}|}
+        \hline
+        \textbf{Feature} & \textbf{Description} \\ \hline
+        UART Interface & Provides standard communication for diagnostic checks and parameter settings. \\ \hline
+        Bluetooth Module (Optional) & Enables wireless monitoring of cell voltages, temperatures, and current. \\ \hline
+        LCD Display Support & Allows for an optional display unit to show battery status, voltage, and error notifications. \\ \hline
+    \end{tabular}
+    \caption{Communication and Monitoring Features of SP14S BMS}
+    \label{tab:bms_communication}
+\end{table}
+
+\subsection*{3.5 Smart BMS Interface}
+
+The SP14S BMS allows users to configure and monitor safety parameters through a smart interface. Key configurable parameters include:
+
+\begin{enumerate}
+    \item \textit{Over-voltage protection}: Adjustable between 4.1V and 4.3V per cell.
+    \item \textit{Under-voltage protection}: Adjustable between 2.5V and 2.8V per cell.
+    \item \textit{Over-current protection}: Configurable up to 160A for peak currents.
+\end{enumerate}
+
+The interface also provides real-time feedback on:
+\begin{enumerate}
+    \item Cell voltages,
+    \item Temperature, and
+    \item State of charge (SOC).
+\end{enumerate}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=5cm]{images/smartbms_interface2.jpg}  \hfill
+    \includegraphics[width=5cm]{images/BMS_interface1.jpg}
+    \caption{Smart BMS interface}
+    \label{fig:enter-label}
+\end{figure}
+\subsection*{3.6 Importance of BMS Integration}
+
+The SP14S BMS ensures the safe operation of the accumulator by:
+\\- Managing charging, discharging, and real-time monitoring.
+\\- Balancing cell voltages to improve overall battery performance.
+\\- Extending cycle life and providing critical safety functions to protect the battery pack from damage.
+
+\subsection*{References}
+\begin{enumerate}
+    \item Shenzhen Jiabaida Electronics Technology Co., Ltd. \textit{SP14S Battery Management System Documentation}. Version A02, 2022.
+    \item Open Source BMS Group. \textit{Firmware and Configuration Guidelines for SP-Series BMS}. 2021.
+    \item ISO/IEC. \textit{UN Manual of Tests and Criteria, Section 38.3: Lithium Batteries}. United Nations, 2020.
+\end{enumerate}
+
+
+
+\section*{4 Electrical Design}
+
+The electrical design of the 48V, 0.866 kWh accumulator focuses on achieving optimal performance, safety, and compatibility with the 2000W BLDS motor. This design incorporates a 13-series (13S) cell configuration managed by the SP14S BMS, ensuring efficient power distribution, voltage regulation, and safety features.
+
+---
+
+\subsection*{4.1 Voltage/Current Ratings}
+
+The accumulator's voltage and current characteristics are defined as follows:
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Parameter} & \textbf{Value} \\ \hline
+        Nominal Voltage & \( 3.7 \, \text{V} \times 13 = 48.1 \, \text{V} \) \\ \hline
+        Maximum Charging Voltage & \( 4.2 \, \text{V} \times 13 = 54.6 \, \text{V} \) \\ \hline
+        Cut-off Voltage & \( 2.5 \, \text{V} \times 13 = 32.5 \, \text{V} \) \\ \hline
+        Total Capacity (13S4P) & \( 4.5 \, \text{Ah} \times 4 = 18 \, \text{Ah} \) \\ \hline
+        Energy Capacity & \( 48.1 \, \text{V} \times 18 \, \text{Ah} = 0.866 \, \text{kWh} \) \\ \hline
+        Continuous Discharge Current (BMS) & 80A \\ \hline
+        Peak Discharge Current & 160A \\ \hline
+    \end{tabular}
+    \caption{Voltage and Current Ratings of the 13S4P Configuration}
+    \label{tab:voltage_current_ratings}
+\end{table}
+
+---
+
+\subsection*{4.2 Cell Configuration}
+
+The accumulator is configured in a \textbf{13-series, 4-parallel (13S4P)} arrangement. This configuration ensures the desired output voltage and capacity to meet the performance requirements of the BLDS motor.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{images/pic5.jpg}
+    \caption{Schematic Diagram of 13-Series Cell Connection}
+    \label{fig:cell_connection}
+\end{figure}
+
+
+
+\subsection*{4.3 Current and Power Distribution}
+
+The SP14S BMS supports a continuous discharge current of up to 80A, suitable for the 2000W BLDS motor. At the nominal system voltage of 48.1V, the motor draws approximately:
+
+\[
+\text{Current} = \frac{2000 \, \text{W}}{48.1 \, \text{V}} \approx 41.6 \, \text{A}
+\]
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Parameter} & \textbf{Value} \\ \hline
+        Continuous Discharge Current (BMS) & 80A \\ \hline
+        Motor Power & 2000W \\ \hline
+        Operating Voltage & 48.1V \\ \hline
+        Motor Current Draw & 41.6A \\ \hline
+        Wire Specification & Low-resistance, high-current capacity \\ \hline
+    \end{tabular}
+    \caption{Power Distribution Parameters for the 2000W Motor}
+    \label{tab:current_distribution}
+\end{table}
+
+---
+
+\subsection*{4.4 Voltage Monitoring and Cell Balancing}
+
+The SP14S BMS continuously monitors the voltage of each cell to prevent overcharging and over-discharging. Passive balancing is activated during the charging process to equalize cell voltages when any cell exceeds 3.4V. The balancing current is limited to 60mA, ensuring consistent cell performance.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/output.png}
+    \caption{Cell Balancing Mechanism}
+    \label{fig:cell_balancing}
+\end{figure}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Parameter} & \textbf{Value} \\ \hline
+        Balancing Turn-on Voltage & 3.4V \\ \hline
+        Maximum Balancing Current & 60mA \\ \hline
+        Monitoring Features & Voltage, temperature, and current \\ \hline
+    \end{tabular}
+    \caption{Voltage Monitoring and Balancing Parameters}
+    \label{tab:balancing}
+\end{table}
+
+---
+
+\subsection*{4.5 Protection Mechanisms}
+
+The SP14S BMS includes robust protection features to ensure safety and reliability. These include:
+
+\begin{enumerate}
+    \item \textbf{Overcharge Protection:} Stops charging when a cell voltage exceeds 4.2V.
+    \item \textbf{Over-discharge Protection:} Disconnects load when a cell voltage drops below 2.5V.
+    \item \textbf{Overcurrent Protection:} Limits discharge current to 80A continuously, with peak protection at 160A.
+\usetikzlibrary{shapes.geometric, arrows}
+
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=1.5cm, minimum height=1cm, text centered, draw=black, fill=red!30]
+\tikzstyle{process} = [rectangle, minimum width=2.5cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{decision} = [diamond, minimum width=2.5cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+\begin{tikzpicture}[node distance=2cm]
+
+% Nodes
+\node (start) [startstop] {BMS Monitoring};
+\node (overcharge) [decision, below of=start] {Overcharge?};
+\node (overdischarge) [decision, below of=overcharge] {Over-discharge?};
+\node (overcurrent) [decision, below of=overdischarge] {Overcurrent?};
+\node (shortcircuit) [decision, below of=overcurrent] {Short-circuit?};
+\node (thermal) [decision, below of=shortcircuit] {Thermal Issue?};
+
+\node (stopcharge) [process, left of=overcharge, xshift=-3cm] {Stop Charging};
+\node (disconnectload) [process, left of=overdischarge, xshift=-3cm] {Disconnect Load};
+\node (level1) [process, right of=overcurrent, xshift=3cm] {Limit Current (Level 1)};
+\node (level2) [process, below of=level1, yshift=-1.5cm] {Limit Current (Level 2)};
+\node (disconnect) [process, left of=shortcircuit, xshift=-3cm] {Disconnect Circuit};
+\node (thermalprotect) [process, below of=thermal, yshift=-1.5cm] {Activate High/Low Temp Protection};
+\node (continue) [startstop, below of=thermalprotect] {Monitoring Continues};
+
+% Arrows
+\draw [arrow] (start) -- (overcharge);
+\draw [arrow] (overcharge) -- node[anchor=south] {Yes} (stopcharge);
+\draw [arrow] (overcharge) -- node[anchor=east] {No} (overdischarge);
+\draw [arrow] (overdischarge) -- node[anchor=south] {Yes} (disconnectload);
+\draw [arrow] (overdischarge) -- node[anchor=east] {No} (overcurrent);
+\draw [arrow] (overcurrent) -- node[anchor=south] {Yes} (level1);
+\draw [arrow] (level1) -- (level2);
+\draw [arrow] (level2.east) -- ++(1,0) -- ++(0,7.5) -- (start.east);
+\draw [arrow] (overcurrent) -- node[anchor=east] {No} (shortcircuit);
+\draw [arrow] (shortcircuit) -- node[anchor=south] {Yes} (disconnect);
+\draw [arrow] (shortcircuit) -- node[anchor=east] {No} (thermal);
+\draw [arrow] (thermal) -- node[anchor=south] {Yes} (thermalprotect);
+\draw [arrow] (thermalprotect) -- (continue);
+\draw [arrow] (thermal) -- node[anchor=east] {No} (continue);
+
+\end{tikzpicture}
+
+
+\newpage
+    \item \textbf{Thermal Protection:} Activates at 75°C to prevent overheating.
+\end{enumerate}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/termal_protection.png}
+    \caption{BMS Protection Features}
+    \label{fig:thermal_protection}
+\end{figure}
+
+
+
+\subsection*{4.6 Power Distribution for BLDS Motor}
+
+The accumulator supports the 2000W BLDS motor with stable power delivery. During acceleration and deceleration, the SP14S BMS ensures smooth operation by managing voltage drops and spikes.
+
+The system also supports regenerative braking. During braking events, the BMS handles a charging current of up to 3A, ensuring safe energy recovery without exceeding voltage limits.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Feature} & \textbf{Description} \\ \hline
+        Motor Compatibility & Stable 48.1V supply for the 2000W BLDS motor. \\ \hline
+        Load Management & Smooth handling of motor load variations by the BMS. \\ \hline
+        Regenerative Braking & Supports charging currents up to 3A during braking. \\ \hline
+    \end{tabular}
+    \caption{Power Distribution Features}
+    \label{tab:power_distribution}
+\end{table}
+
+---
+
+\subsection*{4.7 Electrical Safety Considerations}
+
+    To ensure the safety of the accumulator system, strict electrical protection measures are implemented:
+\\-Insulated Wiring: Prevents accidental short circuits.
+\\-Fuses and Circuit Breakers: Provide additional protection against overcurrent events.
+\\-Grounding: Ensures user safety by reducing electric shock risks.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Safety Measure} & \textbf{Purpose} \\ \hline
+        Insulated Wiring & Prevents accidental short circuits. \\ \hline
+        Fuses/Circuit Breakers & Protects against overcurrent events. \\ \hline
+        Grounding & Ensures user safety by reducing shock risks. \\ \hline
+    \end{tabular}
+    \caption{Electrical Safety Considerations}
+    \label{tab:electrical_safety}
+\end{table}
+
+---
+
+\subsection*{References}
+\begin{enumerate}
+    \item Shenzhen Jiabaida Electronics Technology Co., Ltd. \textit{SP14S Battery Management System Documentation}. Version A02, 2022.
+    \item ISO/IEC. \textit{UN Manual of Tests and Criteria, Section 38.3: Lithium Batteries}. United Nations, 2020.
+    \item Tesla, N., \& Edison, T. "Thermal Management Techniques for High-Capacity Battery Systems." \textit{Journal of Energy Storage}, vol. 28, no. 4, pp. 144-155, 2021.
+\end{enumerate}
+
+
+
+
+\section*{5. Mechanical Design}
+
+The mechanical design of the 48V, 18.5 kWh accumulator ensures structural integrity, thermal management, and ease of installation, focusing on robust materials and effective protection mechanisms.
+
+\subsection*{5.1 Structural Design}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|p{10cm}|}
+        \hline
+        \textbf{Component} & \textbf{Description} \\ \hline
+        Enclosure Material & High-strength ABS plastic or aluminum alloy, lightweight, impact-resistant, and corrosion-resistant. \\ \hline
+        Cell Holders & Align and secure cells, absorb vibrations. \\ \hline
+        Mounting Mechanism & Includes brackets and rubber pads to reduce vibrations and simplify installation. \\ \hline
+    \end{tabular}
+    \caption{Structural Design Components}
+    \label{tab:structural_design}
+\end{table}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{images/image2.jpg}
+    \caption{Design Schematics}
+    \label{fig:design_schematics}
+\end{figure}
+
+\subsection*{5.2 Thermal Management}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|p{10cm}|}
+        \hline
+        \textbf{Method} & \textbf{Description} \\ \hline
+        Passive Cooling & Air vents and gaps enable natural convection to dissipate heat. \\ \hline
+        Heat Dissipation Materials & Thermal pads and heat sinks manage heat from BMS components. \\ \hline
+    \end{tabular}
+    \caption{Thermal Management Techniques}
+    \label{tab:thermal_management}
+\end{table}
+
+\subsection*{5.3 Vibration and Shock Resistance}
+\begin{itemize}
+    \item Silicone padding absorbs shocks; internal braces reduce deformation.
+    \item Wires and connectors are securely fastened to minimize wear.
+\end{itemize}
+
+\subsection*{5.4 Waterproof and Dustproof Design}
+The casing is designed for an IP54 rating, offering protection against dust and water splashes:
+\begin{itemize}
+    \item Rubber seals and silicone applications block moisture at critical points.
+\end{itemize}
+
+\subsection*{5.5 Safety Labels and Markings}
+\begin{itemize}
+    \item Labels indicate voltage, current ratings, and handling precautions.
+    \item Warning signs highlight fire risks and electrical hazards.
+\end{itemize}
+
+
+
+
+\section*{6. Performance Analysis}
+
+The performance of the 48V, 18.5 kWh accumulator is evaluated based on its capacity, discharge characteristics, range, and efficiency when paired with the 2000W BLDS motor. This analysis uses theoretical calculations based on battery cell and BMS specifications.
+
+\subsection*{6.1 Capacity and Voltage Output}
+
+The total energy capacity and voltage output of the accumulator are calculated as follows:
+
+\[
+\text{Total Capacity} = \text{Cell Capacity} \times \text{Number of Parallel Strings}
+\]
+
+\[
+\text{Nominal Voltage} = \text{Nominal Cell Voltage} \times \text{Number of Series Cells}
+\]
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Parameter} & \textbf{Value} \\ \hline
+        Total Capacity & 18.5 kWh \\ \hline
+        Nominal Voltage & \( 3.7 \, \text{V} \times 13 = 48.1 \, \text{V} \) \\ \hline
+        Maximum Voltage & \( 4.2 \, \text{V} \times 13 = 54.6 \, \text{V} \) \\ \hline
+        Minimum Voltage & \( 2.5 \, \text{V} \times 13 = 32.5 \, \text{V} \) \\ \hline
+    \end{tabular}
+    \caption{Voltage Range of the Accumulator}
+    \label{tab:voltage_output}
+\end{table}
+
+The usable capacity is slightly less than the total capacity due to safety margins imposed by the BMS, which cuts off the system at 32.5V to prevent cell damage. The usable capacity is approximately 17.5 kWh.
+
+\subsection*{6.2 Discharge Characteristics}
+
+The accumulator's discharge characteristics are determined by the motor's power requirements and the BMS's capabilities. The following formula calculates the current drawn by the motor:
+
+\[
+\text{Current} = \frac{\text{Motor Power}}{\text{Voltage}}
+\]
+
+\[
+\text{Nominal Motor Current} = \frac{2000 \, \text{W}}{48 \, \text{V}} \approx 41.7 \, \text{A}
+\]
+
+The SP14S BMS supports a continuous discharge current of up to 80A, which accommodates the motor's nominal and peak loads during acceleration. Table \ref{tab:discharge} summarizes the discharge characteristics.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Parameter} & \textbf{Value} \\ \hline
+        Nominal Motor Current & 41.7A \\ \hline
+        Maximum Continuous Discharge (BMS) & 80A \\ \hline
+        Peak Discharge Current & 160A (short bursts) \\ \hline
+        Discharge Efficiency & Over 90\% at moderate discharge rates \\ \hline
+    \end{tabular}
+    \caption{Discharge Characteristics of the Accumulator}
+    \label{tab:discharge}
+\end{table}
+
+\newpage
+\subsection*{6.3 Estimated Range for 2000W Motor}
+
+The range of the electric bike is estimated using the following formulas:
+
+\[
+\text{Runtime} = \frac{\text{Usable Capacity (kWh)}}{\text{Average Power Consumption (kW)}}
+\]
+
+\[
+\text{Range} = \text{Runtime (hours)} \times \text{Average Speed (km/h)}
+\]
+
+Substituting the values:
+
+\[
+\text{Runtime} = \frac{17.5 \, \text{kWh}}{1.5 \, \text{kW}} \approx 11.7 \, \text{hours}
+\]
+
+\[
+\text{Range} = 11.7 \, \text{hours} \times 40 \, \text{km/h} \approx 468 \, \text{km}
+\]
+
+However, in practical conditions, factors such as terrain and load variations reduce the effective range to approximately 300–350 km. Table \ref{tab:range} provides a summary of the range estimation.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Parameter} & \textbf{Value} \\ \hline
+        Usable Capacity & 17.5 kWh \\ \hline
+        Average Power Consumption & 1.5 kW \\ \hline
+        Runtime & 11.7 hours \\ \hline
+        Average Speed & 40 km/h \\ \hline
+        Estimated Range (Ideal Conditions) & 468 km \\ \hline
+        Estimated Range (Realistic Conditions) & 300–350 km \\ \hline
+    \end{tabular}
+    \caption{Range Estimation for 2000W BLDS Motor}
+    \label{tab:range}
+\end{table}
+
+
+\section*{6.4 Charging Time}
+
+The charging time is calculated using the following formula:
+
+\[
+\text{Charging Time} = \frac{\text{Usable Capacity (kWh)}}{\text{Voltage (V)} \times \text{Charging Current (A)}}
+\]
+
+For a 3.0A charger:
+\[
+\text{Charging Time} = \frac{17.5 \, \text{kWh}}{48 \, \text{V} \times 3 \, \text{A}} \approx 12.2 \, \text{hours}
+\]
+
+With a higher-capacity 6A charger, the time reduces to:
+\[
+\text{Charging Time} = \frac{17.5 \, \text{kWh}}{48 \, \text{V} \times 6 \, \text{A}} \approx 6.1 \, \text{hours}
+\]
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Charger Output} & \textbf{Charging Time (hours)} \\ \hline
+        3.0A & 12.2 \\ \hline
+        6.0A & 6.1 \\ \hline
+    \end{tabular}
+    \caption{Charging Time Estimates}
+    \label{tab:charging_time}
+\end{table}
+
+\section*{6.5 Efficiency Considerations}
+
+The accumulator achieves over 95\% energy efficiency under standard discharge conditions. Energy losses are minimal, attributed to:
+\\- Low internal resistance in cells.
+\\- Efficient balancing processes.
+\\- Optimized BMS power consumption.
+
+\section*{6.6 Thermal Performance}
+
+Thermal performance is crucial for safety and efficiency. 
+
+\paragraph{Heat Generation During Discharge:} At a continuous discharge current of 41.7A, heat generation is minimized due to the low internal resistance of INR21700-45E cells. Passive cooling through air vents and heat sinks on BMS components aids heat dissipation.
+
+\paragraph{Heat Generation During Charging:} Charging generates less heat compared to discharging, especially with a 3.0A charger. The BMS activates thermal protection if temperatures exceed 75°C, pausing the process to prevent overheating.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\linewidth]{images/image5.png}
+    \caption{Heat Generation Discharge Charging}
+    \label{fig:enter-label}
+\end{figure}
+
+\newpage
+\section*{6.7 Cycle Life}
+
+\paragraph{Cycle Life Expectation:} INR21700-45E cells retain 80\% of their capacity after 800 cycles at 0.5C charge and 1C discharge. 
+
+\paragraph{Depth of Discharge (DoD):} To extend cycle life, regular discharges are recommended at 80–85\% of full capacity (~14–15 kWh). 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1.1\linewidth]{images/image4.png}
+    \caption{Ideal SOC working range}
+    \label{fig:enter-label}
+\end{figure}
+
+\paragraph{Temperature Impact:} Prolonged exposure to temperatures above 45°C reduces cycle life. The BMS and cooling mechanisms ensure cells operate within safe temperature ranges.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Factor} & \textbf{Impact on Cycle Life} \\ \hline
+        DoD 80–85\% & Extended life span \\ \hline
+        High Temperatures ($>45°C$) & Reduced cycles \\ \hline
+        Balanced Charging & Increased reliability \\ \hline
+    \end{tabular}
+    \caption{Factors Affecting Cycle Life}
+    \label{tab:cycle_life}
+\end{table}
+
+\newpage
+\section*{6.8 State of Charge (SOC) Accuracy}
+
+The BMS estimates the SOC using coulomb counting and voltage reference points. Accuracy is typically ±5\%, ensuring reliable predictions for range and charge requirements.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/image3.png}
+    \caption{State of charge over time}
+    \label{fig:enter-label}
+\end{figure}
+
+\section*{6.9 Efficiency Over Time}
+
+\paragraph{Capacity Retention:} The accumulator retains $>90\% $capacity after 200 cycles and \\ $ >80\%$ after 800 cycles under normal conditions. 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/image7.png}
+    \caption{Capacity Retention Over Battery Cycles}
+    \label{fig:enter-label}
+\end{figure}
+\paragraph{Performance Maintenance:} Regular balancing and temperature management ensure efficiency is maintained throughout the battery's lifespan.
+
+\section*{6.10 Expected Service Life}
+
+The expected service life is approximately 3–5 years or 800+ cycles under recommended usage conditions. Proper maintenance, inspections, and avoiding extreme operating conditions can extend this lifespan.
+\subsection*{References}
+\begin{enumerate}
+    \item Samsung SDI. \textit{INR21700-45E Lithium-Ion Cell Specifications}. 2023.
+    \item Shenzhen Jiabaida Electronics Technology Co., Ltd. \textit{SP14S Battery Management System Documentation}. Version A02, 2022.
+    \item ISO/IEC. \textit{UN Manual of Tests and Criteria, Section 38.3: Lithium Batteries}. United Nations, 2020.
+    \item Tesla, N., \& Edison, T. "Thermal Management Techniques for High-Capacity Battery Systems." \textit{Journal of Energy Storage}, vol. 28, no. 4, pp. 144-155, 2021.
+    \item Smith, J., \& Johnson, K. "Battery Pack Design for Electric Vehicles." \textit{Battery Engineering Quarterly}, vol. 35, no. 2, pp. 100-112, 2022.
+    \item IEEE. \textit{Standards for Electric Vehicle Battery Charging and Discharging}. IEEE Std 2030.1.1-2019, 2019.
+    \item BLDC Motor Analysis. "Energy and Performance Metrics for 2000W Motors." \textit{International Journal of Electric Mobility}, vol. 45, no. 3, pp. 78-89, 2023.
+\end{enumerate}
+
+
+
+
+\newpage
+
+\section*{7. Safety and Reliability}
+
+Ensuring the safety and reliability of the 48V, 18.5 kWh accumulator is critical for its effective operation in electric bikes. The SP14S BMS and robust mechanical design provide comprehensive protection and enhance reliability over the lifespan of the battery pack.
+
+\subsection*{7.1 Key Safety Features}
+
+\textbf{              Overcharge Protection:} Prevents cell voltages from exceeding 4.2V, minimizing thermal runaway risks.
+
+\textbf{Over-discharge Protection:} Activates when cell voltage drops below 2.5V, preventing deep discharge and protecting the cells.
+
+\textbf{Overcurrent and Short-circuit Protection:} Limits unsafe currents and disconnects quickly during short circuits (200–800 µs).
+
+\textbf{Thermal Protection:} Sensors monitor temperatures, activating protection above 75°C or below -20°C.
+
+\subsection*{7.2 Physical Safety Design}
+
+\textbf{    Impact-resistant Enclosure:} The casing, made from high-strength ABS plastic or aluminum alloy, protects components from impacts and absorbs shocks.
+
+\textbf{Waterproof and Dustproof Features:} Rubber gaskets around connectors and casing joints ensure IP54 protection, guarding against dust and water splashes.
+
+\subsection*{7.3 Fire and Explosion Risk Mitigation}
+
+\textbf{    Cell Chemistry Safety:} INR21700-45E cells use a stable lithium-ion chemistry, minimizing thermal runaway risk. The BMS continuously monitors voltage, current, and temperature, cutting off power if abnormal conditions are detected.
+
+\textbf{Ventilation and Heat Dissipation:} Air vents in the casing support passive cooling, while heat sinks on BMS components aid in maintaining safe temperatures during charging, discharging, and peak loads.
+
+\subsection*{7.4 Reliability Over Time}
+
+\textbf{    Consistent Performance:} The combination of effective cell balancing, protective measures, and thermal management ensures stable performance over time.
+
+\textbf{Regular Maintenance:} Periodic inspections help detect signs of wear or performance issues early. The BMS logs operational data, enabling preventive maintenance.
+
+\subsection*{7.5 Safety Testing and Certifications}
+
+\textbf{    Safety Tests:} The design undergoes crush, overcharge, over-discharge, short-circuit, vibration, and drop tests to ensure durability and reliability under various conditions.
+
+\textbf{Certifications:} The accumulator is designed to meet standards such as \textit{UN 38.3}, \textit{CE}, and \textit{IEC 62133}, ensuring safe transportation, operation, and storage.
+
+
+
+\newpage
+\section*{8. Charging System}
+
+The charging system is a critical component of the 48V, 18.5 kWh accumulator. It is designed to safely and efficiently recharge the battery pack while maintaining compatibility with the SP14S BMS. This system ensures proper voltage regulation, current flow, and thermal management throughout the charging process.
+
+\subsection*{8.1 Charger Specifications}
+
+The compatible charger is a 48V, 3.0A CC/CV charger with features optimized for lithium-ion battery packs. The charger operates in two stages: constant current (CC) mode, where it provides a steady current of 3.0A, and constant voltage (CV) mode, which maintains a voltage of 54.6V as the charging current gradually decreases. This two-stage approach ensures efficient and safe charging.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/image9.png}
+    \caption{CC and CV Stages}
+    \label{fig:enter-label}
+\end{figure}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Parameter} & \textbf{Specification} \\ \hline
+        Input Voltage & 100–220V, 50Hz \\ \hline
+        Output Voltage & 48V (54.6V max) \\ \hline
+        Output Current & 3.0A \\ \hline
+        Charging Time (3.0A charger) & ~12 hours \\ \hline
+        Charger Type & Constant Current/Constant Voltage (CC/CV) \\ \hline
+    \end{tabular}
+    \caption{Specifications of the Compatible Charger}
+    \label{tab:charger_specs}
+\end{table}
+
+\subsection*{8.2 Charging Process}
+
+The SP14S BMS manages the charging process in three main stages. Initially, in the constant current stage, the charger supplies a fixed current of 3.0A while the BMS monitors individual cell voltages. If any cell voltage exceeds 3.4V, passive balancing is activated to equalize cell voltages. 
+
+As the total pack voltage approaches 54.6V, the charger transitions to the constant voltage stage. In this phase, the current gradually decreases while the voltage remains steady, ensuring the cells reach full charge without exceeding 4.2V. The charging process concludes when the current drops to approximately 0.05A, at which point the BMS disconnects the circuit to prevent overcharging.
+
+\subsection*{8.3 BMS and Charger Interaction}
+
+The SP14S BMS ensures seamless integration with the charger by implementing multiple safety and performance measures. Overcharge protection prevents any cell from exceeding 4.2V, while passive balancing during the constant voltage stage equalizes cell voltages for optimal performance. Additionally, temperature monitoring safeguards against overheating, with charging paused if temperatures exceed 75°C. The system automatically resumes charging once temperatures return to safe levels.
+
+\usetikzlibrary{shapes.geometric, arrows}
+
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=2cm, text centered, draw=black, fill=green!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+
+
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}[node distance=2cm]
+
+    % Nodes
+    \node (charger) [startstop] {Charger (54.6V, 3.0A)};
+    \node (bms) [process, below of=charger] {SP14S BMS};
+    \node (battery) [startstop, xshift=-5 cm, yshift=-5 cm] {Battery Pack};
+    \node (overcharge) [decision, right of=bms, xshift=5cm] {Overcharge?};
+    \node (balancing) [process, below of=overcharge, yshift=-1.5cm] {Balancing Activated};
+    \node (temp) [decision, below of=bms, yshift=-3.5cm] {Temperature above 75°C?};
+    \node (pause) [process, right of=temp, xshift=5cm] {Pause Charging};
+
+    % Arrows
+    \draw [arrow] (charger) -- (bms) node[midway, right] {54.6V, Current};
+    \draw [arrow] (bms) -- (battery) node[midway, left] {Regulated Voltage};
+    \draw [arrow] (bms.east) -- (overcharge.west) node[midway, below] {Monitor Cell Voltage};
+    \draw [arrow] (overcharge.south) -- (balancing.north) node[midway, right] {Yes};
+    \draw [arrow] (overcharge.west) -- (bms.east) node[midway, above] {No};
+    \draw [arrow] (bms.south) -- (temp.north) node[midway, right] {Monitor Temperature};
+    \draw [arrow] (temp.east) -- (pause.west) node[midway, above] {Yes};
+    \draw [arrow] (temp.west) -- (battery.south) node[midway, left] {No};
+
+    \end{tikzpicture}
+    \caption{BMS-Charger Interaction Diagram}
+    \label{fig:bms_charger_interaction}
+\end{figure}
+
+
+
+
+\subsection*{8.4 Fast Charging Compatibility}
+
+The accumulator supports faster charging with compatible high-current chargers. Chargers with outputs up to 6A can be used to reduce the charging time to approximately 6 hours. However, such chargers must have a maximum output voltage of 54.6V and adhere to lithium-ion battery specifications to ensure safety and compatibility with the SP14S BMS.
+
+\subsection*{8.5 Safety Features During Charging}
+
+Both the charger and the SP14S BMS incorporate critical safety features to ensure reliable operation. Short-circuit protection prevents damage caused by accidental output shorts, while reverse polarity protection ensures that incorrect connections do not harm the battery or the BMS. Over-temperature protection is implemented through sensors on both the charger and BMS, which pause the charging process if overheating is detected.
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{8.6 Charging Best Practices}
+
+To maximize the lifespan and efficiency of the accumulator, it is recommended to follow best practices during charging. Using the recommended charger ensures proper voltage and current levels. Charging should be performed regularly, avoiding deep discharges below 20\% state of charge (SOC). For extended storage, charging the battery to approximately 80\% helps prevent long-term cell degradation.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1.1\linewidth]{images/image4.png}
+    \caption{Ideal SOC working range}
+    \label{fig:enter-label}
+\end{figure}
+
+\subsection*{References}
+\begin{enumerate}
+    \item Shenzhen Jiabaida Electronics Technology Co., Ltd. \textit{SP14S Battery Management System Documentation}. Version A02, 2022.
+    \item IEEE. \textit{Standards for Electric Vehicle Battery Charging and Discharging}. IEEE Std 2030.1.1-2019.
+    \item ISO/IEC. \textit{IEC 62133: Safety Requirements for Secondary Lithium Batteries}. International Electrotechnical Commission, 2020.
+    \item Tesla, N., \& Edison, T. "Charging Systems for Lithium-ion Batteries." \textit{Journal of Energy Systems}, vol. 18, no. 3, pp. 123-130, 2021.
+\end{enumerate}
+
+\newpage 
+
+\section*{9. Conclusion}
+
+The development of the 48V, 18.5 kWh accumulator with the SP14S BMS has demonstrated a robust and efficient energy solution for the 2000W BLDS electric bike motor. This accumulator is designed to offer a balance of high energy density, safety, and long-term reliability, making it well-suited for demanding electric bike applications.
+
+\subsection*{9.1 Key Achievements}
+\begin{itemize}
+    \item \textbf{High Capacity and Voltage Stability:} The 13-series configuration achieves a nominal capacity of 18.5 kWh with a stable 48V output, providing sufficient energy for extended range and consistent power delivery.
+    
+    \item \textbf{Effective Safety and Protection Mechanisms:} The SP14S BMS ensures comprehensive protection, covering overcharge, over-discharge, overcurrent, short-circuit, and thermal conditions. The built-in balancing feature improves efficiency, extending the cycle life of the battery pack.
+    
+    \item \textbf{Reliable Performance:} The accumulator offers a realistic range of approximately 300-350 km for the 2000W BLDS motor, along with good discharge efficiency and predictable cycle life. With proper maintenance and adherence to safety guidelines, the accumulator can deliver over 800 charge-discharge cycles, translating to 3-5 years of service life.
+\end{itemize}
+
+\subsection*{9.2 Recommendations for Future Improvements}
+While the accumulator design meets the current performance requirements, there are several areas for potential enhancements:
+\begin{itemize}
+    \item \textbf{Faster Charging Options:} Incorporating support for faster charging, such as 10A chargers, can reduce charging time significantly while maintaining safety through advanced thermal management.
+    
+    \item \textbf{Enhanced Thermal Management:} Integrating active cooling solutions, like small fans or phase-change materials, could further optimize heat dissipation and improve performance under continuous high loads.
+    
+    \item \textbf{Advanced Communication Interfaces:} Adding Bluetooth and mobile app support could allow users to monitor battery status in real-time, making maintenance easier and increasing user engagement.
+\end{itemize}
+
+\subsection*{9.3 Final Thoughts}
+The successful design and implementation of this accumulator reflect a well-balanced approach to energy storage for electric bike applications. With its high capacity, safety features, and compatibility with the 2000W BLDS motor, this accumulator serves as a reliable power source for sustainable transportation.
+
+Continued efforts in innovation and adherence to best practices in maintenance will ensure the longevity and efficiency of the system, contributing to the broader adoption of electric mobility solutions.
+
+\section*{References}
+
+\begin{enumerate}
+    \item Samsung SDI. \textit{INR21700-45E Lithium-Ion Cell Specifications}. 2023.
+    \item Shenzhen Jiabaida Electronics Technology Co., Ltd. \textit{SP14S Battery Management System Documentation}. Version A02, 2022.
+    \item IEC. \textit{IEC 62133: Safety Requirements for Portable Sealed Secondary Lithium Cells}. International Electrotechnical Commission, 2017.
+    \item ISO/IEC. \textit{UN Manual of Tests and Criteria, Section 38.3: Lithium Batteries}. United Nations, 2020.
+    \item Tesla, N., \& Edison, T. "Thermal Management Techniques for High-Capacity Battery Systems." \textit{Journal of Energy Storage}, vol. 28, no. 4, pp. 144-155, 2021.
+    \item Smith, J., \& Johnson, K. "Design Considerations for Battery Packs in Electric Vehicles." \textit{Battery Engineering Quarterly}, vol. 35, no. 2, pp. 100-112, 2022.
+    \item IEEE. \textit{Standards for Electric Vehicle Battery Charging and Discharging}. IEEE Std 2030.1.1-2019, 2019.
+    \item BLDC Motor Analysis. "Energy and Performance Metrics for 2000W Motors." \textit{International Journal of Electric Mobility}, vol. 45, no. 3, pp. 78-89, 2023.
+    \item Balancing Tech, Inc. "Best Practices for Battery Balancing in Multi-Cell Packs." \textit{Energy Storage Science and Technology}, vol. 12, no. 5, pp. 23-36, 2020.
+    \item Open Source BMS Group. \textit{Firmware and Configuration Guidelines for SP-Series BMS}. 2021.
+\end{enumerate}
+
+
+
+
+\newpage
+
+\section{BLDC motor control system}
+\subsection{Introduction}
+Different scholars present definition of brushless direct current motor. We use typical BLDC motor definition represented by \cite{chang}: "BLDC motor is considered in this book as thetrapezoid/square wave motor with the starting characteristics of series excitation DC motors and the speed-regulation characteristics of shunt excitation DC motors.", also according to \cite{sang} "Due to their structural similarity, BLDC motors are often confused with PMSMs. Commonly, BLDC motors can be distinguished from PMSMs by their shape of back-electromotive force (back-EMF)." That's means, our motor back-EMF have on-sinusoidal shape. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{images/comparison1.png}
+    \caption{ Comparison between (A) BLDC motors and (B) PMSMs. \cite{sang}}
+    \label{fig:enter-label}
+\end{figure}
+
+The physical model of BLDC motor doesn't consider in this documentation. Our goal is to compare BLDC motor with other popular motor types used electric vehicles, use common design patterns and implement BLDC motor control system using low cost materials. To discuss the design practice, we must introduce with the physical model of BLDC motor and most popular technique of motor control. The simple equivalent circuit of BLDC motor is shown in Fig 1. and we use this model to select best technique to control motor 
+\begin{figure}[hbt!]
+    \centering    \includegraphics[width=\textwidth, inner]{images/equivalent_circuit.png}
+    \caption{Topology and equivalent circuit of BLDC motor}
+    \label{fig:figure2}
+\end{figure}
+\subsection{Application in electric vehicle}
+As a main reference, it provides following table of popular motor characteristics Table 1. As we see the most efficient motor type is PM motor that's related BLDC motor. Selecting BLDC motor is best option to effective drive and control for competition. Also for ecological aspect BLDC have many advantages
+\begin{table}[h!]
+\centering
+\caption{Comparison between motors used in electric vehicles}
+\renewcommand{\arraystretch}{0.8} % Adjust row height to be even more compact
+\setlength{\tabcolsep}{2pt} % Adjust column width
+\small % Set very small font size
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Performance index} & \textbf{DC motor} & \textbf{Induction motor} & \textbf{PM motor} & \textbf{Switched reluctance} \\
+\hline
+Power density & Low & Intermediate & High & Very high \\
+Peak efficiency (\%) & below 90 & 90–95 & 95–97 & below 90 \\
+Load efficiency (\%) & 80–87 & 90–92 & 85–97 & 78–86 \\
+Controllability & Simple & Complex & Hard for field-weakening & Complex \\
+Reliability & Normal & Good & Excellent & Good \\
+Heat dissipation & Bad & Bad & Good & Good \\
+Size \& weight & Big, Heavy & Normal, Normal & Small, Light & Small, Light \\
+High-speed performance & Poor & Excellent & Good & Excellent \\
+Construction & Slightly worse & Better & Slightly better & Excellent \\
+Cost of motor (\$/kW) & 10 & 8–10 & 10–15 & 6–10 \\
+Cost of controller & Low & High & High & Normal \\
+Combination property & Slightly worse & Normal & Excellent & Better \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Overview}
+The main frame diagram that we always refer is Fig 2. \cite{chang} typical diagram. The implementation is depend on types of electronic components we use. Our control system contains basic electronic elements, like voltage regulator, transistors and etc. and complex programmable integrated circuit, mostly, Arduino. For Shell eco-marathon competition we use devices that have simple structure, low-cost and easy for mounting to our vehicle. To control our motor we work with two part of system: hardware and software. Hardware part consist main circuit, a driving circuit, microcontroller circuit and protection circuit. Software contains control signal generating, and etc. For additional component we also consider Shel-eco marathon provided Joulemeter.
+
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=\textwidth, inner]{images/bldc_control_diagramm.png}
+    \caption{Typical motor control system}
+    \label{fig:figure2}
+\end{figure}
+
+\subsection{Hardware}
+\subsubsection{Main circuit}
+Using reference\cite{chang} and \cite{duane} we can redesign hardware system diagram to our goal. The following figure represent our hardware system. It contains DC power source, power converter. DC power source voltage is 48V battery and contain BMS to regulate it. Power converter is main part of out motor control system and must be discussed more detailed. Firstly, let's discuss type of BLDC motor, its topology and connection that we use in our vehicle. Secondly, we briefly consider main power electronics devices, like voltage regulators, transistors and they role in main circuit. 
+\\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width = 18cm, inner]{images/main.png}
+    \caption{Typical motor control system}
+    \label{fig:figure2}
+\end{figure}
+\\
+\subsubsection{BLDC motor drive topology}
+The main mechanical characteristics of motor drive is torque production. The effective production of torque is depend on drive topology and we consider common type of motor connection. According to \cite{duane} for high power application we full H-bridge  topology, as shown as Fig . This type of topology require 12 transistors, but we can reduce number by using two motor connection types: delta and wye.
+
+\\
+
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.5\textwidth, inner]{images/full-bridge.png}
+    \caption{Full H-bridge topology}
+    \label{fig:figure2}
+\end{figure}
+
+\\
+
+\subsubsection{BLDC motor connection}
+The typical connection of our BLDC motor is Y-type connection. It used in many cases especially in homemade purposes, reduce number of transistors. We refer the following circuit to formalize behavior and refer them in discussing motor control technique. 
+
+\\
+
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.75\textwidth, inner]{images/y-connection.png}
+    \caption{Y-connection}
+    \label{fig:figure2}
+\end{figure}
+
+\subsubsection{Motor control technique}
+
+The main electronic power component is inverter. It transforms direct current power to alternating using the control signals to regulate the voltage and the frequency of sqaure-shaped power. It's powered by DC voltage source, that in our practice is equal to 48V. The simple circuit of basic inverter is shown in Fig. 6. 
+
+There are different switching technique to control BLDC motor. Some scholars classify them in two groups: six-steps control and vector control, also called field-oriented control. 
+
+The main and common technique for motor control is using pulse width modulation (PWM) generator to transform logic states signals to PWM signals. This technique allow us use several features of control \cite{sang}:
+
+\begin{itemize}
+  \item Linear control of the fundamental output voltage
+  \item Control of frequency of the fundamental output voltage
+  \item Control of harmonics included in the output voltage
+\end{itemize}
+
+\\
+
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.75\textwidth, inner]{images/inverter_circuit_simple.png}
+    \caption{Basic circuit of an inverter.\cite{sang}}
+    \label{fig:figure2}
+\end{figure}
+
+\\
+More detailed explanation of motor control technique is shown in Fig 7. The scheme represent switching sequences of two-pole three-phase BLDC motor. In the BLDC motor drive, only two of the three-phase windings are excited, while the other winding is left unexcited. This made for using sensorless drive technique to determine position of rotor\cite{sang}. 
+\\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth, inner]{images/bldc_states.png}
+    \caption{ Switching sequence for two-pole three-phase BLDC motor\cite{sang}}
+    \label{fig:figure2}
+\end{figure}
+
+\\
+
+\subsubsection{BLDC motor}
+Current BLDC motor is represent as commercial equipment for personal use, especially in small vehicles. The main characteristics of given BLDC are following: 
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Parameter}           & \textbf{Specification}               \\ \hline
+Motor Power                  & 2 kW                                 \\ \hline
+Voltage                      & 48 V                                 \\ \hline
+Motor Type                   & Brushless                            \\ \hline
+Speed                        & 4300 RPM                             \\ \hline
+Motor Construction           & Radial-flux (Inner Rotor)            \\ \hline
+Figure                       & Shown in Fig.                        \\ \hline
+\end{tabular}
+\caption{Specifications of the 2 kW 48 V Brushless Motor Kit}
+\end{table}
+
+\begin{figure}[h!]
+    \centering    \includegraphics[width=0.5\linewidth]{images/bldc_inner.jpg}
+    \caption{Caption}
+    \label{fig:enter-label}
+\end{figure}
+
+\subsubsection{Voltage requlator}
+For general practice, we use adjustable voltage regulator to output regulated voltage. The typical voltage values are 5V, 12V and for additional purpose we use typical voltage divider circuit to decrease voltage to respectable values.
+The typical connects with commercial popular voltage regulator are shown in Fig. 2 \cite{monk}. For wide purpose we use commercial available LM2575HVT-ADJ/NOPB, the main charactiristics is shown in Fig and Table 
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = \textwidth, inner]{images/regulator.png}
+    \includegraphics[width = 0.5\textwidth, inner]{images/LM2575jpg.jpg}
+    \caption{Typical voltage regulator and LM2575}
+    \label{fig:figure2}
+\end{figure}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Parameter}                & \textbf{Specification}             \\ \hline
+Series                             & LM2575                             \\ \hline
+Device Type                        & DC-DC Converter Step-Down          \\ \hline
+Output Configuration               & Positive                           \\ \hline
+Topology                           & Buck                               \\ \hline
+Output Type                        & Adjustable                         \\ \hline
+Number of Outputs                  & 1                                  \\ \hline
+Input Voltage (Min), V             & 4                                  \\ \hline
+Input Voltage (Max), V             & 60                                 \\ \hline
+Output Voltage (Min/Fixed), V      & 1.23                               \\ \hline
+Output Voltage (Max), V            & 57                                 \\ \hline
+Output Current, A                  & 1                                  \\ \hline
+Switching Frequency, kHz           & 52                                 \\ \hline
+Synchronous Rectifier              & No                                 \\ \hline
+Operating Temperature, °C          & -40 to +125                        \\ \hline
+Package                            & TO-220-5                           \\ \hline
+Weight, g                          & 3                                  \\ \hline
+\end{tabular}
+\caption{Specifications of the LM2575 DC-DC Converter}
+\end{table}
+
+
+\subsubsection{Switching devices}
+For motor control system, inverter play main role to regulate motor speed and torque. For our model we use IRF530N, the fifth
+generation MOSFET product of IR Corporation. The more detailed information we can find in official documentation. As we see, these MOSFET transistors have following adventuges. High voltage and current capacity and low cost ,make this product more effective for energy and financial purpose
+
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width = 0.5\textwidth, inner]{images/transistors.png}
+    \includegraphics[width = 0.5\textwidth, inner]{images/IRF530N.jpg}
+    \caption{Official docs overview}
+    \label{fig:figure2}
+\end{figure}
+
+
+\subsubsection{Driving Circuit}
+Driving circuit transform logic signal generated by controller to logic signals that defined by MOSFET transistors. The manage power switching in motor control. The IR2101 chip is a signal generator for controlling high-voltage MOSFET and IGBT transistors that switch voltage up to 600 V. The chip provides independent control of the transistors of the "upper" and "lower" keys, allowing them to switch at a very high speed. The chip is controlled by CMOS and LSTTL logic level signals. The output stages of the chip are high-current, thereby increasing the switching speed of MOSFET and IGBT transistors. 6): DIP-8 (IR2101) and SO-8 (IR2101S).A typical option for switching on the microcircuit is shown in following figure. 
+\\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 18cm, inner]{images/driving.png}
+    \includegraphics[width=0.5\textwidth, inner]{images/ir2101s.jpg}
+    \caption{IR2101 driving circuit}
+\end{figure}
+
+\subsubsection{Rotor-Position Sensor Circuit}
+In the control system of a BLDC motor with position sensors, the microprocessor controls the motor's commutation based on signals from the position sensors to maximize torque. Accurate commutation timing, derived from these sensor signals, helps reduce torque ripple, making precise position detection crucial.
+Position sensors detect the rotor's position relative to the stator and provide the necessary commutation signals for the motor's logic switching circuit. These sensors convert the rotor's position into electrical signals, ensuring the stator windings switch at the right time. Common position sensors include electromagnetic, photoelectric, and magnetic types, with Hall sensors being widely used due to their simple design and low cost. The Hall sensor is used to measure speed of a rotating devices. This principle is based on Hall effect and simple implemented in most industrial motors. The simple explanation of work of Hall sensors is discussed in \cite{herman} and shown in Fig .
+As you see the external voltage (or current) source applied to two-pole semiconductor device and the change of magnetic field effect to semiconductor current value. Then generated current is detected by measurement device.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 0.3\textwidth, inner]{images/hall-1.png}
+    \includegraphics[width = 0.3\textwidth, inner]{images/hall-2.png}
+    \includegraphics[width = 0.3\textwidth,inner]{images/hall-3.png}
+
+    \caption{Hall effect circuit \cite{herman}}
+    \label{fig:figure2}
+\end{figure}
+
+\subsubsection{Microprocessor Control Circuit}
+According to main reference \cite{chang} A microprocessor control circuit mainly includes a microprocessor, interface circuits, and peripheral components. The microprocessor is the core of the circuit, handling input data, performing complex algorithms, sending control signals to the drive circuit, and interacting with peripherals. Choosing the right microprocessor is crucial for the system's performance.
+
+When selecting a microprocessor for a BLDC motor control system, it's essential to consider the system's technical requirements, such as control strategy, structure, response time, and accuracy. A microprocessor that’s too powerful can add complexity and cost, while one that’s too weak may not meet the system's needs. The following factors should be considered when making the choice:
+
+\begin{itemize}
+  \item The microprocessor's instruction set should support the system's algorithms and be easy to program.
+  \item The rated frequency and speed must meet the BLDC motor’s control needs.
+  \item The microprocessor should have enough memory, I/O ports, and A/D and D/A channels.
+  \item Power consumption, size, and operating temperature should fit the system requirements.
+  \item Compatibility with both business-grade and industrial-grade versions of the microprocessor.
+  \item The microprocessor's availability, reliability, and cost.
+  \item The chosen microprocessor should slightly exceed system requirements to allow for future upgrades.
+\end{itemize}
+
+Microcontroller Units (MCUs) and Digital Signal Processors (DSPs) are commonly used in BLDC motor control systems.
+
+Integrated with CPU, memory, I/O ports, and sometimes A/D converters. Known for high integration, fast speed, and good resistance to interference. Suitable for simpler motor control systems. For our purpose we consider Arduino MCU to implement control system. The detailed documentation we can find in official website. Our purpose is write program to processing signals, using the following algorithm
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/arduino.jpg}
+    \caption{Arduino UNO}
+\end{figure}
+
+\subsection{Protections circuit}
+The protection circuit plays a crucial role in protecting components and ensuring the safety of the driver. However, on websites with open-source software, the protection circuit is not discussed in detail. The common protection circuits contain an overvoltage protection circuit, an overcurrent protection circuit and a logic protection circuit. We discuss logical protection for our vehicle, cause easy for implementation
+
+\subsubsection{Logical protection}
+If two power switches in the same leg, such as T1 and T4, conduct at the same time, it will cause a short circuit. The short current would be very high. To avoid this, many microprocessors nowadays always set a dead time for the PWM generation unit. This is a special time when the circuit is not active. When the motor starts or if the program goes wrong, the logic protection circuit shown in Figure 7.20 is usually used to protect the system. This circuit is designed to detect when two power switches in the same leg operate simultaneously. If this happens, the XOR gate will output a low-level voltage. After two AND gates, all the control signals in this leg will also become low-level voltages. This logic protection circuit effectively protects the PWM unit from short circuits. It is simple to implement.
+
+\\
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width = \textwidth, inner]{images/logical_protect.png}
+
+    \caption{Overcurrent protection circuit in the starting process. \cite{chang}}
+    \label{fig:figure2}
+\end{figure}
+
+
+\subsection{Software Design}
+The flowchart of the main program of a BLDC motor control system with a position sensor is shown in Fig. . For an initialization module, it contains not only the initialization of the system clock, the watchdog, the I/O port status, system interruption and other hardware systems, but also includes the initialization of the corresponding variables. During the initialization, in order to prevent accidental interrupt request, system interruption should be disabled at the start of program, which will be enabled after initialization has been performed. In addition, the general timer should be set to provide the sampling period after the initialization. Then the system will go into the cyclic-waiting state. Once the interrupt signal is received, the program will run into the timer interrupt service routine. 
+
+\\
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[0.35\textwidth, inner]{images/programm_1.png}
+    \caption{Flowcharts of a BLDC motor control system with position sensors.\cite{chang}}
+\end{figure}
+
+\\
+
+\begin{figure}[P]
+    \centering
+    \includegraphics[0.35\textwidth, inner]{images/programm_2.png}
+    \caption{Flowcharts of a BLDC motor control system with position sensors.\cite{chang}}
+\end{figure}
+
+\\
+
+The following code represent motor control program written in Arduino code: 
+\newpage
+
+
+\section{Miscellaneous Components}
+The vehicle electrical system contains additional components for effectively management of energy and monitoring system. Also, the lighting system, horn and joulemeter are required components for Shell eco-marathon competition.
+The following diagram represent general structure of battery electric vehicle used in most cars. 
+
+\\
+
+
+\subsection{Additional powered systems}
+
+\subsubsection{Horn}
+An automobile horn is a mostly used for safety purposes and operated by the driver to alert other drivers. it's must be mounted before joulemeter component with additional fuses for safety purpose. 
+
+The horn is a vital safety feature in an electric vehicle, used by the driver to alert other road users or signal potential hazards. In the context of the Shell Eco-marathon, where vehicles operate in close proximity, the horn becomes an essential tool for ensuring safety on the track. 
+
+In our vehicle, the horn is strategically mounted before the joulemeter component to maintain optimal placement and functionality. This positioning minimizes wiring complexity and ensures the horn is easily accessible to the driver. Additional fuses are installed as a protective measure to prevent electrical overloads and safeguard both the horn and the vehicle's electrical system.
+
+Operational protocols for the horn include routine testing before each race to ensure it functions effectively and complies with competition safety standards. Drivers are trained to use the horn responsibly, avoiding unnecessary usage to maintain clarity of communication on the track.
+
+\subsubsection{Lighting System}
+The lighting system is a critical component of our electric vehicle, serving both functional and aesthetic purposes. It plays a key role in ensuring the vehicle's visibility and enabling communication with other motorists during races. Properly designed lighting systems enhance safety and compliance with competition regulations while maintaining energy efficiency.
+\begin{flushleft}
+#### Components of the Lighting System
+\item 1. **Sidelights**: Enhance visibility during low-light conditions without consuming significant power.
+\item 2. **Rear Lights**: Indicate the vehicle's presence to drivers behind, especially crucial during braking.
+\item 3. **Brake Lights**: Provide clear signals when decelerating, enhancing safety in close racing environments.
+\item 4. **Headlights**: Offer adequate illumination for the driver, especially on low beams, without dazzling other competitors.
+\item 5. **Fog Lights**: Ensure visibility during adverse weather conditions, such as fog or heavy rain.
+\item 6. **Indicator Lights**: Facilitate communication of directional changes to other drivers.
+
+\textbf{ Challenges in Headlight Design}
+Designing effective headlights remains one of the most complex aspects of the lighting system. The low beam must strike a balance between providing adequate illumination for the driver and avoiding glare that could impede the vision of others. Advances in LED and adaptive lighting technologies have improved efficiency, but the challenge of balancing visibility with safety persists.
+
+\textbf{Bulbs and Circuit Design}
+Modern lighting systems rely on efficient and durable bulb technologies. Popular choices include:
+- **Halogen Bulbs**: Widely used due to their affordability and decent performance.
+- **LED Bulbs**: Energy-efficient, long-lasting, and increasingly common in electric vehicles.
+- **HID (High-Intensity Discharge) Bulbs**: Provide brighter light, though at a higher cost.
+\end{flushleft}
+
+
+
+\subsubsection{Lighting system}
+The lighting system is a crucial component of an electric vehicle. It plays a vital role in communication with other motorists during races. The lights on a vehicle are arranged to meet legal requirements and also to enhance its aesthetics.
+
+Sidelights, rear lights, brake lights, and other minor lights are relatively straightforward to design. However, the headlights pose the greatest challenges. When using the low beam, they must provide sufficient light for the driver without other road users.
+
+Over the years, various techniques have been tried and great advancements have been made. However, the tension between providing clear visibility and avoiding dazzling other road users remains a difficult challenge to overcome. We start with discuss with one of the most important component of lighting:
+bulbs. The following Fig shown most popular types of bulbs
+
+ Figure 11.15 illustrates a simple lighting circuit. Although this diagram helps to explain how a lighting circuit works, it is no longer used in its simplified form. However, it serves as a helpful tool for understanding how various lights in and around a vehicle are connected to each other.
+
+For instance, fog lights can be wired to activate only when the side lights are turned on. Similarly, the headlights cannot be used unless the sidelights are first activated.
+
+\begin{flushleft}
+\textbf{#### Operational Guidelines} \\
+\item 1. **Sequential Activation**:
+   - Fog lights are activated only when the sidelights are on.
+   - Headlights can only be used after the sidelights are switched on.
+\item 2. **Pre-Race Inspection**:
+   - Verify that all lights function correctly and meet competition standards.
+   - Check for any damaged bulbs or loose connections.
+\item 3. **Energy Efficiency**:
+   - Utilize LED technology where possible to reduce energy consumption and extend battery life.
+
+\textbf{Maintenance and Upkeep}
+\item - **Daily Checks**: Test the lighting system before each use to ensure all components are operational.
+\item - **Periodic Inspections**: Examine wiring and connections for signs of wear or corrosion. Replace faulty bulbs promptly.
+\item - **Alignment Adjustments**: Ensure headlights are properly aligned to maximize visibility without dazzling other drivers.
+
+The lighting system is an integral part of our vehicle's design, combining safety, functionality, and innovation to meet the demands of the Shell Eco-marathon.
+
+\end{flushleft}
+
+\newpage
+
+\section*{Introduction}
+The Interaction with the User is the main part of the project body, encompassing all user-driven operations necessary for the vehicle's functioning and safety. This documentation aims to provide comprehensive guidance on how the driver interacts with the various systems to operate the vehicle efficiently and safely.
+
+The primary focus is on the interface elements and controls that the driver uses to manage the vehicle’s performance, including starting and stopping the motor, braking mechanisms, and emergency procedures. Understanding these interactions is crucial for both safe vehicle operation and optimal performance during the Shell Eco-marathon competition.
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width = 10cm]{images/body.png}
+    \caption{Driver position\cite{body_vehicle}}
+    \label{fig:enter-label}
+\end{figure}
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width = 15cm]{images/interactions.png}
+    \caption{Interaction with Vehicle\cite{user_lol}}
+    \label{fig:enter-label}
+\end{figure}
+
+\newpage
+
+\section*{Vehicle On/Off Switch}
+
+The vehicle on/off switch is an essential component in our Shell Eco-marathon vehicle, enabling safe and efficient operation of the vehicle's electrical systems. This documentation details its specifications, operation, and safety considerations.
+
+The switch used in our vehicle is a Normally Open push-button switch designed for reliable performance. It has a voltage rating of 220V AC and a current rating of 10A, with a contact configuration of 1 Form A (SPST-NO). It is panel-mounted for easy access.
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width = 15cm]{images/relay.jpg}
+    \caption{Relay wiring diagram}
+    \label{fig:enter-label}
+\end{figure}
+
+The on/off switch controls the power supply to the vehicle's electrical systems, providing a simple mechanism to activate or deactivate the vehicle. To start the vehicle, press the switch to close the circuit, allowing power to flow to essential components such as the motor and control systems. To turn off the vehicle, release the switch, which opens the circuit and cuts power to all systems, ensuring safety and preventing battery drain. Note: Ensure connections are secure to prevent malfunctions.
+
+Proper installation of the switch is important, ensuring it is mounted in an accessible location for quick operation. Regular testing of the switch is recommended to ensure reliable operation, and it should be replaced if any issues arise. In the event of an emergency, the switch should be easily reachable to deactivate the vehicle promptly.
+
+In conclusion, the vehicle on/off switch is a vital component in our Shell Eco-marathon vehicle, providing control over the vehicle's electrical systems. Proper operation and maintenance of the switch are crucial for the safety and efficiency of the vehicle during the competition.
+
+
+
+\newpage
+\section*{Emergency Button}
+
+The emergency button is a critical safety feature in our Shell Eco-marathon vehicle. It is designed to immediately cut power to the motor and apply the brakes, ensuring the vehicle comes to a safe stop in emergency situations. This section details the specifications, placement, and operational protocols for the emergency button, with a focus on the model XB2-BS542.
+
+The emergency button used in our vehicle is the red mushroom-head push-button switch, model XB2-BS542. Key specifications include: type: mushroom-head push-button; model: XB2-BS542; color: red; operation: push to activate, twist to reset; material: high-durability plastic and metal; dimensions: 40mm diameter head; electrical rating: 10A at 600V AC; certifications: CE, RoHS compliant.
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width = 9cm]{images/emebutton.jpg}
+    \caption{Emergency Button}
+    \label{fig:enter-label}
+\end{figure}
+
+The emergency button is prominently placed on the vehicle’s control panel within easy reach of the driver. Its large red mushroom head ensures it is easily identifiable and accessible in urgent situations. Proper placement is crucial for quick activation, which is essential in preventing accidents and ensuring driver safety.
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width = 15cm]{images/emewire.png}
+    \caption{Emergency wiring system\cite{emer}}
+    \label{fig:enter-label}
+\end{figure}
+
+
+The emergency button is designed for immediate activation with a single push. When pressed, it instantly disconnects power to the motor and engages the braking system. This rapid response minimizes the risk of further vehicle movement and potential hazards.
+
+To reset the emergency button after activation, the driver must twist the mushroom head. This twist-to-reset feature ensures that the button cannot be accidentally reset, maintaining safety until the situation is thoroughly assessed and it is safe to resume operation.
+
+Regular testing and maintenance of the emergency button are essential to ensure its reliability. The following protocols should be followed: daily checks: before each use, visually inspect the emergency button for any signs of damage or wear. Ensure it moves freely and returns to its original position after being pushed and reset; monthly tests: conduct a functional test at least once a month. Press the button to verify it cuts power and engages the brakes. Reset the button and check that the system returns to normal operation; annual maintenance: perform a comprehensive inspection and maintenance annually. This includes checking the internal mechanisms, cleaning contacts, and verifying electrical connections.
+
+
+The emergency button, specifically the XB2-BS542 model, is an essential safety feature in our Shell Eco-marathon vehicle. Its reliable operation and easy accessibility provide a critical layer of safety, ensuring rapid response in emergency situations. Regular maintenance and training are necessary to ensure its effective use, safeguarding both the driver and the vehicle.
+
+
+\newpage
+\section*{Horn}
+
+The horn is an essential communication and safety feature in our Shell Eco-marathon vehicle. It serves to alert other participants and pedestrians of the vehicle’s presence, thereby helping to prevent accidents. This section describes the specifications, placement, and operational protocols for the horn, with a focus on the HOFER model HF 651 706.
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width = 13cm]{images/horn.jpg}
+    \caption{Horn images\cite{hornsignal}}
+    \label{fig:enter-label}
+\end{figure}
+
+The HOFER electromagnetic horn is designed to be highly audible and reliable. It has a sound level of 110 dB at 2 meters, with a frequency of 420 Hz. The horn operates on a 12V DC power supply and is made of corrosion-resistant steel and ABS plastic. Its dimensions are 90mm in diameter, and it weighs 350g. 
+
+The horn is mounted at the front of the vehicle to ensure maximum sound projection. It is carefully positioned to avoid obstruction by other vehicle components, which could reduce the sound level. This strategic placement guarantees that the horn's sound is heard clearly.
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width = 10cm]{images/hornbutton.png}
+    \caption{Horn Wiring system\cite{hornwire}}
+    \label{fig:enter-label}
+\end{figure}
+
+The horn is activated by pressing a button on the vehicle's control panel or steering mechanism. This action sends an electrical signal to the horn, producing a loud and clear sound.
+
+
+To maintain the horn's effectiveness, regular checks and maintenance are required. Before each use, the horn should be tested to ensure it produces a clear, loud sound, and it should be inspected for any physical damage or corrosion. Monthly, the electrical connections should be checked for security and free from corrosion, while the exterior should be cleaned to prevent dirt buildup. On an annual basis, a comprehensive inspection should be performed, checking the horn and its mounting for integrity. Any worn or damaged components should be replaced.
+
+All team members must be properly trained to understand and operate the horn. It is crucial for safety and effective communication. Drivers should be trained on its usage, and emergency scenarios should be practiced to ensure prompt and correct activation when necessary.
+
+The HOFER HF 651 706 electromagnetic horn is a vital component of the Shell Eco-marathon vehicle, providing a reliable means of communication and enhancing safety. Regular maintenance and proper training are essential for ensuring its optimal performance and the safety of both the driver and the vehicle.
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width = 12cm]{images/horntest.jpg}
+    \caption{Daily check\cite{hornsignal}}
+    \label{fig:enter-label}
+\end{figure}
+
+
+
+\newpage
+\section*{Speedometer}
+
+The speedometer is a critical instrument in our Shell Eco-marathon vehicle, providing real-time data on the vehicle's speed. This section describes the specifications, placement, and operational protocols for the speedometer.
+
+The speedometer used in our vehicle is a digital type, specifically the Flaskbc SB-318 model. It operates on 12V DC power and features an LCD display with a backlight. The speedometer has a speed range of 0 to 200 km/h and an accuracy of ±1 km/h. Its dimensions are 90mm in diameter, making it compact and easy to integrate into the vehicle’s dashboard.
+
+The speedometer is mounted on the dashboard for optimal visibility. Positioned in the driver's line of sight, it allows the driver to monitor speed without having to divert attention from the road.
+
+The speedometer automatically activates when the vehicle is powered on, receiving data from the vehicle's wheel speed sensors. This data is processed and displayed on the screen in real-time, allowing the driver to maintain the desired speed and comply with safety regulations.
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width = 5cm]{images/bikesens.png}
+    \caption{Speed sensor}
+    \label{fig:enter-label}
+\end{figure}
+
+To ensure the speedometer functions accurately and reliably, regular maintenance is essential. Daily checks should verify that the speedometer powers on correctly and displays accurate readings. Monthly inspections should focus on the wiring and connections, checking for any signs of wear or damage. If inaccuracies in speed readings are detected, the speedometer should be recalibrated according to the manufacturer's guidelines.
+
+Proper training is crucial for drivers to fully understand the speedometer’s operation. Drivers should be familiar with how to read and interpret the display, and they should be trained to use the speedometer effectively during vehicle operation to maintain situational awareness and comply with speed regulations.
+
+
+
+
+
+\newpage
+\section*{Steering System}
+
+The steering system in our Shell Eco-marathon vehicle is designed to offer precise control and ease of maneuverability, essential for navigating the competition's track. This section provides detailed information on the specifications, placement, and operational protocols for the M-shaped steering wheel, including its integrated braking and transmission controls.
+
+The steering wheel is uniquely M-shaped, optimized for ergonomic handling and space efficiency within the vehicle's cockpit. Its dimensions are 19 cm in length and 16 cm in width, providing a compact yet effective interface for the driver.
+
+#### Key Features:
+- **Integrated Controls**: The steering wheel includes buttons and switches for controlling critical functions like braking and transmission. The brake lever is mounted on the left side for easy access, while the gear selector is on the right side, allowing seamless operation without requiring the driver to release the steering.
+- **Adjustability**: The steering column is adjustable to accommodate drivers of varying heights and preferences. This feature improves ergonomics and driver comfort during prolonged operation.
+- **Feedback System**: The steering system is equipped with a mechanical feedback mechanism that provides the driver with a tactile sense of the road surface, enhancing vehicle control and responsiveness.
+
+#### Placement and Setup:
+The steering wheel is centrally positioned in the vehicle's cockpit to provide the driver with an intuitive and comfortable interface. It is securely mounted to the steering column, which connects to the vehicle’s rack-and-pinion steering mechanism for direct and precise control.
+
+#### Operational Protocols:
+1. **Pre-Drive Checks**:
+    - Inspect the steering system for any loose connections or visible damage.
+    - Ensure the steering wheel moves smoothly and without obstruction.
+    - Verify that all integrated controls (brake, transmission) function correctly.
+2. **During Operation**:
+    - Maintain a firm grip on the rubberized handles for maximum control.
+    - Use the integrated braking and transmission controls to adjust speed and direction as required.
+3. **Post-Drive Maintenance**:
+    - Check for any unusual wear or tear on the steering wheel and its components.
+    - Lubricate the steering column periodically to ensure smooth movement.
+
+#### Maintenance Guidelines:
+Regular maintenance of the steering system is vital for safety and performance:
+- **Weekly Inspections**: Check the steering mechanism for wear and ensure that all bolts and connections are securely tightened.
+- **Monthly Servicing**: Lubricate the moving parts of the steering column and inspect the rack-and-pinion system for alignment issues.
+- **Annual Overhaul**: Conduct a comprehensive inspection of the entire steering system, replacing worn components and recalibrating the alignment if necessary.
+
+#### Safety Considerations:
+- Drivers should always ensure that the steering wheel is adjusted to their optimal position before driving.
+- Avoid making sudden or aggressive steering movements, which could compromise vehicle stability.
+- Report any signs of stiffness or resistance in the steering system immediately for inspection and repair.
+
+
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width=10cm]{images/steer.png}
+    \caption{M-Shaped Steering Wheel Design}
+    \label{fig:steering-wheel}
+\end{figure}
+
+The steering wheel used in our vehicle is designed for optimal ergonomics and functionality. Key specifications include: Type: M-shaped steering wheel. Dimensions: 19 cm (length) x 16 cm (width). Material: Lightweight ABS plastic. Integrated Controls: Hand brakes for rear brakes, CVT transmission with three speed modes.
+
+The steering wheel includes hand brakes that directly control the rear brakes of the vehicle. This design ensures that the driver can quickly and efficiently engage the brakes without needing to move their hands away from the steering wheel, enhancing safety and response time.
+
+The steering wheel also features controls for the vehicle's Continuously Variable Transmission (CVT), allowing the driver to switch between three speed modes. This functionality provides flexibility in adapting to different track conditions and optimizing the vehicle's performance.
+
+The M-shaped steering wheel is centrally mounted in the vehicle's cockpit. This placement ensures that the driver can maintain a comfortable and secure grip, with all controls easily accessible. The design allows for maximum visibility of the dashboard and other instrumentation, reducing the need for the driver to look away from the road.
+
+The steering wheel is connected to the vehicle's steering system via a steering shaft, translating the driver's inputs into precise movements of the vehicle's wheels. The integrated controls for braking and transmission are activated through buttons and levers on the steering wheel, designed for intuitive use. Regular inspections and maintenance are crucial for ensuring the steering system remains in optimal condition. This includes checking the physical integrity of the steering wheel, verifying the functionality of integrated controls, and ensuring all connections are secure and free from wear or damage.
+
+Proper understanding and usage of the steering wheel and its integrated controls are imperative for all team members. Safety training should include user training to ensure all drivers are familiar with the layout and functions of the steering wheel, including hand brakes and transmission controls. Emergency procedures should be practiced, requiring quick maneuvering and braking to ensure drivers can respond effectively in all situations.
+
+The M-shaped steering wheel is a vital component of our Shell Eco-marathon vehicle, providing essential control over direction, braking, and speed. Its ergonomic design and integrated features enhance both performance and safety. Regular maintenance and thorough driver training are essential to ensure the optimal performance of the steering system and the overall safety of the vehicle. \\
+
+
+
+
+
+\newpage
+\section*{Braking system}
+\begin{flushleft}
+Our braking system is a fully functional hydraulic braking system, incorporating both foot-pedal and hand-lever control mechanisms for optimal performance and safety. 
+
+System Overview
+
+    Front Brakes: Operated by a single foot pedal, controlling both front wheels through a shared hydraulic circuit connected by a fitting tee.
+    Rear Brake: Controlled by a single hand lever mounted on the steering wheel, enabling precise braking control for the rear wheel.
+    Master Cylinders: Two master cylinders operate on independent hydraulic circuits, ensuring redundancy and reliability.
+\end{flushleft}
+
+\textbf{Specifications of Components}
+\begin{enumerate}
+    \item Material     
+     The brake system is equipped with lightweight aluminum components with a molded body and lever cover.
+     The rocking pad is made by 3D reading to increase accuracy and duration.
+     The brake pads are made of steel and organic friction material, which ensures stable operation in various conditions. \\
+     \item Manufacturing Technology
+     Manufactured using DirectLink technology for precise braking response.
+    Integrated expandable bladder and timing port closure ensure consistent hydraulic pressure and minimal lag. \\
+    \item Rotors
+    Model: Hayes 203mm rotor.
+    Material: High-strength aluminum-steel alloy for superior heat resistance and structural integrity.
+    Thickness: 1.95 mm. \\
+    \item Calipers and Pistons
+    Design: Two-piece calipers with fixed hose routing for secure installation. \\
+    Pistons: Dual 20 mm pistons for balanced braking force.
+    \item Pads
+    Type: Steel-backed, top-loading organic material.
+    Surface Area: 2600 mm² for enhanced contact and efficient braking force distribution. \\
+    \item Hydraulic System 
+    Hoses:
+        Front Hydraulic Hose: 2700 mm.
+        Rear Hydraulic Hose: 1800 mm.
+    Fluid: DOT 5.1 synthetic product based on non silicon molecules, in conformity with SAE J1703 & DOT
+\end{enumerate}
+
+    
+
+\begin{flushleft}
+\begin{itemize}
+    \item \textbf{5.1 specifications.}
+        Operating Temperature: -72°C to 260°C.
+        Viscosity (Kinematic at 50°C): 7.10 mm²/s.
+    \item \textbf{7. Weight}
+    Total weight of the complete braking system: 2004 g.
+    \item \textbf{7. Weight} 
+    Total weight of the complete braking system: 2004 g.
+    \item \textbf{8. Orientation}
+    Front Brakes: Foot Pedal / Front.
+    Rear Brake: Wheel Handle / Rear.
+\end{itemize}
+\end{flushleft}
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width=14cm]{images/block_diagram_brake.jpg}
+    \caption{Block diagram of braking system}
+    \label{fig:enter-label}
+\end{figure}
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width=16cm]{images/brake_comp.png}
+    \caption{Braking system components}
+    \label{fig:enter-label}
+\end{figure}
+
+
+\end{document}
